@@ -8,8 +8,8 @@ const nextConfig = {
     unoptimized: true, // GitHub Pages cannot handle next/image optimization
   },
   output: 'export', // enables static export
-  basePath: '/v0-real-estate-landing-page',
-  assetPrefix: '/v0-real-estate-landing-page/',
+  basePath: '', // repo name
+  assetPrefix: '', // ensures CSS/JS/assets/video links work
 };
 
 export default nextConfig;
