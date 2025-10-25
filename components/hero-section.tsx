@@ -24,11 +24,28 @@ export default function HeroSection() {
     }
   }
 
+  const handleScrollDown = () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth"
+    })
+  }
+
   return (
     <section className="relative w-full h-screen overflow-hidden pt-16">
-      {/* Background Video/Image */}
+      {/* Background Video */}
       <div className="absolute inset-0">
-        <img src="/residential-horizon.png" alt="Hero background" className="w-full h-full object-cover" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src="/Mahalaxmi (1).mp4" type="video/mp4" />
+          {/* Fallback image if video fails to load */}
+          <img src="/residential-horizon.png" alt="Hero background" className="w-full h-full object-cover" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
       </div>
 
@@ -67,18 +84,17 @@ export default function HeroSection() {
           style={{ transitionDelay: "300ms" }}
         >
           <Button
-            onClick={() => handleScrollToSection("stories")}
+            onClick={() => handleScrollToSection("our-projects")}
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-6 text-lg rounded-full cursor-pointer"
           >
             Explore Projects
           </Button>
           <Button
-            onClick={() => handleScrollToSection("stories")}
+            onClick={() => handleScrollToSection("services")}
             variant="outline"
             className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full gap-2 bg-transparent cursor-pointer"
           >
-            <Play className="w-4 h-4" />
-            Watch Our Story
+            Our Services 
           </Button>
         </div>
 
@@ -101,12 +117,15 @@ export default function HeroSection() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className={`absolute bottom-8 transition-all duration-700 ${isVisible ? "opacity-100" : "opacity-0"}`}>
+        <button
+          onClick={handleScrollDown}
+          className={`absolute bottom-8 transition-all duration-700 cursor-pointer hover:scale-110 ${isVisible ? "opacity-100" : "opacity-0"}`}
+        >
           <div className="flex flex-col items-center gap-2 animate-bounce">
             <span className="text-white/60 text-sm">Scroll to explore</span>
             <ChevronDown className="w-5 h-5 text-emerald-400" />
           </div>
-        </div>
+        </button>
       </div>
     </section>
   )

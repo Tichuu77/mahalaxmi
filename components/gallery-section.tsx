@@ -81,7 +81,7 @@ export default function GallerySection() {
   ]
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section id="gallery" className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <h2 className="text-4xl md:text-5xl font-bold mb-2">Gallery</h2>

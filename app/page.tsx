@@ -12,6 +12,9 @@ import GallerySection from "@/components/gallery-section"
 import ContactSection from "@/components/contact-section"
 import WhatsAppButton from "@/components/whatsapp-button"
 import Footer from "@/components/footer"
+import OurProjects from "@/components/our-projects"
+import AmenitiesSection from "@/components/amenities"
+import ProjectHighlightsSection from "@/components/project-highlights"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -31,8 +34,11 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <StatsSection />
-      <StoriesSection />
+      <OurProjects />
+      {/* <StoriesSection /> */}
       <ServicesSection />
+      <AmenitiesSection/>
+      <ProjectHighlightsSection/>
       <TestimonialsSection />
       <GallerySection />
       <ContactSection />

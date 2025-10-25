@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: "About", id: "about" },
-                { label: "Stories", id: "stories" },
+                { label: "Projects", id: "our-projects" },
                 { label: "Services", id: "services" },
                 { label: "Contact", id: "contact" },
               ].map((link) => (
@@ -58,16 +58,16 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-emerald-400" />
                 <a
-                  href="mailto:akashtikhat50@gmail.com"
+                  href="mailto:girishpatankar7@gmail.com"
                   className="hover:text-emerald-400 transition-colors cursor-pointer"
                 >
-                  akashtikhat50@gmail.com
+                  girishpatankar7@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-emerald-400" />
-                <a href="tel:+918668569759" className="hover:text-emerald-400 transition-colors cursor-pointer">
-                  +91 8668569759
+                <a href="tel:+918766887828" className="hover:text-emerald-400 transition-colors cursor-pointer">
+                  +91 8766887828
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -86,13 +86,13 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              {[Facebook, Instagram, Linkedin].map((Icon, idx) => (
+              {[{icon:Phone,link:"tel:+918766887828"} , {icon:Mail,link:"mailto:girishpatankar7@gmail.com"},{icon:Instagram,link:"https://www.instagram.com/akashtikhat50/"} ].map((obj, idx) => (
                 <a
                   key={idx}
-                  href="#"
+                  href= {obj.link}
                   className="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-emerald-600 transition-colors duration-300 cursor-pointer"
                 >
-                  <Icon className="w-5 h-5" />
+                  <obj.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>

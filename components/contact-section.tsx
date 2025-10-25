@@ -41,37 +41,42 @@ export default function ContactSection() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setIsSubmitting(true)
 
-    // Validate form
-    if (!formData.name || !formData.email || !formData.phone || !formData.subject || !formData.message) {
-      setSubmitStatus("error")
-      setIsSubmitting(false)
-      return
-    }
-
-    // Simulate submission
-    setTimeout(() => {
-      const mailtoLink = `mailto:akashtikhat50@gmail.com?subject=${encodeURIComponent(
-        formData.subject,
-      )}&body=${encodeURIComponent(
-        `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`,
-      )}`
-
-      window.location.href = mailtoLink
-      setSubmitStatus("success")
-      setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
-      setIsSubmitting(false)
-
-      setTimeout(() => setSubmitStatus("idle"), 3000)
-    }, 500)
+  if (!formData.name || !formData.email || !formData.phone || !formData.subject || !formData.message) {
+    setSubmitStatus("error")
+    setIsSubmitting(false)
+    return
   }
 
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    })
+
+    if (res.ok) {
+      setSubmitStatus("success")
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" })
+    } else {
+      setSubmitStatus("error")
+    }
+  } catch (error) {
+    console.error(error)
+    setSubmitStatus("error")
+  } finally {
+    setIsSubmitting(false)
+    setTimeout(() => setSubmitStatus("idle"), 3000)
+  }
+}
+
+
   const contactInfo = [
-    { icon: Mail, label: "Email", value: "akashtikhat50@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+91 8668569759" },
+    { icon: Mail, label: "Email", value: "girishpatankar7@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+91 8766887828" },
     { icon: MapPin, label: "Location", value: "Nagpur, Maharashtra" },
   ]
 
@@ -225,7 +230,7 @@ export default function ContactSection() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-semibold transition-all disabled:opacity-50"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-semibold transition-all disabled:opacity-50 hover:cursor-pointer"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

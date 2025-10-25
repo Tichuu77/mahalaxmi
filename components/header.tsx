@@ -14,8 +14,12 @@ export default function Header({ isScrolled }: HeaderProps) {
 
   const navItems = [
     { label: "About", id: "about" },
-    { label: "Stories", id: "stories" },
+    { label: "Projects", id: "our-projects" },
+    { label: "Amenities", id: "amenities" },
     { label: "Services", id: "services" },
+    { label: "Highlights", id: "highlights" },
+    { label: "Testimonials", id: "testimonials" },
+    { label: "Gallery", id: "gallery" },
     { label: "Contact", id: "contact" },
   ]
 
@@ -40,8 +44,8 @@ export default function Header({ isScrolled }: HeaderProps) {
             <Image
               src="/mahalaxmi-logo.png"
               alt="Mahalaxmi Group Logo"
-              width={60}
-              height={60}
+              width={100}
+              height={100}
               className="object-contain"
             />
           </div>
@@ -90,7 +94,7 @@ export default function Header({ isScrolled }: HeaderProps) {
                 {item.label}
               </button>
             ))}
-            <a href="tel:+918668569759" className="block px-4 py-2">
+            <a href="tel:+918766887828" className="block px-4 py-2">
               <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white gap-2 cursor-pointer">
                 <Phone className="w-4 h-4" />
                 Get in Touch
