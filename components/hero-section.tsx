@@ -42,7 +42,7 @@ export default function HeroSection() {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="/Mahalaxmi (1).mp4" type="video/mp4" />
+          <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/git-blob/prj_CSJDcZLj5wOKCROFpKb6L43ZhFPj/FOHSIoOoQcDa3oU7doswPx/public/Mahalaxmi%20%281%29.mp4" type="video/mp4" />
           {/* Fallback image if video fails to load */}
           <img src="/residential-horizon.png" alt="Hero background" className="w-full h-full object-cover" />
         </video>
