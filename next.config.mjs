@@ -1,14 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // Next.js 16+ no longer supports eslint in next.config.mjs
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // allows build even if TS errors exist
   },
   images: {
-    unoptimized: true,
+    unoptimized: true, // GitHub Pages cannot handle next/image optimization
   },
-}
+  output: 'export', // enables static export
+  basePath: '/v0-real-estate-landing-page', // repo name
+  assetPrefix: '/v0-real-estate-landing-page/', // ensures CSS/JS/assets/video links work
+};
 
-export default nextConfig
+export default nextConfig;
