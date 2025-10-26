@@ -51,84 +51,91 @@ export default function OurProjects() {
          description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 34. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
         location: `MOUZA - BAHADURA`
       },
-       {
-        id: 4,
-        title: "Mahalaxmi Nagar - 33",
-        image: "/completedProject4.webp",
-        description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 33. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA - JAMTHA`
-      },
-      {
-        id: 5,
-        title: "Mahalaxmi Nagar - 26",
-        image: "/completedProject5.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 26. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-        location: `MOUZA - KOTEWADA`
-      },
-       {
-        id: 6,
-        title: "Mahalaxmi Nagar - 25",
-        image: "/completedProject6.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 25. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-        location: `MOUZA -  JAMTHA`
-      },
-       {
-        id: 7,
-        title: "Mahalaxmi Nagar - 24",
-        image: "/completedProject7.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 24. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-        location: `MOUZA -  JAMTHA`
-      },
-      {
-        id: 8,
-        title: "Mahalaxmi Nagar - 23",
-        image: "/completedProject8.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 23. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-        location: `MOUZA -  JAMTHA`
-      },
-       {
-        id: 9,
-        title: "Mahalaxmi Nagar - 22",
-        image: "/completedProject9.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 22. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-        location: `MOUZA -  GAVSI MANAPUR`
-      },
-       {
-        id: 10,
-        title: "Mahalaxmi Nagar - 21",
-        image: "/completedProject10.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 21. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-        location: `MOUZA -   SHANKARPUR`
-      },
-       {
-        id: 11,
-        title: "Mahalaxmi Nagar - 19",
-        image: "/completedProject11.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 19. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-        location: `MOUZA -   DONGARGAON`
-      },
-      {
-        id: 12,
-        title: "Mahalaxmi Nagar - 18",
-        image: "/completedProject12.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 18. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-       location: `MOUZA -   JAMTHA`
-      }
+      //  {
+      //   id: 4,
+      //   title: "Mahalaxmi Nagar - 33",
+      //   image: "/completedProject4.webp",
+      //   description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 33. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+      //   location: `MOUZA - JAMTHA`
+      // },
+      // {
+      //   id: 5,
+      //   title: "Mahalaxmi Nagar - 26",
+      //   image: "/completedProject5.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 26. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //   location: `MOUZA - KOTEWADA`
+      // },
+      //  {
+      //   id: 6,
+      //   title: "Mahalaxmi Nagar - 25",
+      //   image: "/completedProject6.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 25. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //   location: `MOUZA -  JAMTHA`
+      // },
+      //  {
+      //   id: 7,
+      //   title: "Mahalaxmi Nagar - 24",
+      //   image: "/completedProject7.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 24. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //   location: `MOUZA -  JAMTHA`
+      // },
+      // {
+      //   id: 8,
+      //   title: "Mahalaxmi Nagar - 23",
+      //   image: "/completedProject8.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 23. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //   location: `MOUZA -  JAMTHA`
+      // },
+      //  {
+      //   id: 9,
+      //   title: "Mahalaxmi Nagar - 22",
+      //   image: "/completedProject9.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 22. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //   location: `MOUZA -  GAVSI MANAPUR`
+      // },
+      //  {
+      //   id: 10,
+      //   title: "Mahalaxmi Nagar - 21",
+      //   image: "/completedProject10.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 21. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //   location: `MOUZA -   SHANKARPUR`
+      // },
+      //  {
+      //   id: 11,
+      //   title: "Mahalaxmi Nagar - 19",
+      //   image: "/completedProject11.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 19. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //   location: `MOUZA -   DONGARGAON`
+      // },
+      // {
+      //   id: 12,
+      //   title: "Mahalaxmi Nagar - 18",
+      //   image: "/completedProject12.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 18. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
+      //  location: `MOUZA -   JAMTHA`
+      // }
     ],
     ongoing: [
-      {
-        id: 13,
-        title: "Tattva Apas",
-        image: "/ongoingProject1.webp",
-        description: `A SUPREME LIVING EXPERIENCE IN THE HEART OF THE CITY`,
-        location: `MOUZA - BELTARODI`
+      // {
+      //   id: 13,
+      //   title: "Tattva Apas",
+      //   image: "/ongoingProject1.webp",
+      //   description: `A SUPREME LIVING EXPERIENCE IN THE HEART OF THE CITY`,
+      //   location: `MOUZA - BELTARODI`
+      // },
+       {
+        id: 19,
+        title: "Mahalaxmi Nagar-31",
+        image: "/ongoingProject8.webp",
+        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 31. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        location: `MOUZA -   PIPLA`
       },
-      {
-        id: 14,
-        title: "Mahalaxmi Nagar - 42",
-        image: "/ongoingProject2.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 42. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA -  JAMTHA`
+        {
+        id: 17,
+        title: "Mahalaxmi Nagar-39",
+        image: "/ongoingProject5.webp",
+        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 39. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        location: `MOUZA -   CHICHOLI`
       },
       {
         id: 15,
@@ -138,40 +145,48 @@ export default function OurProjects() {
         location: `MOUZA -  GOMGAON`
       },
       {
-        id: 16,
-        title: "Mahalaxmi Nagar-40",
-        image: "/ongoingProject4.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 40. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA -  KOTEWADA`
-      },
-        {
-        id: 17,
-        title: "Mahalaxmi Nagar-39",
-        image: "/ongoingProject5.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 39. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA -   CHICHOLI`
+        id: 14,
+        title: "Mahalaxmi Nagar - 42",
+        image: "/ongoingProject2.webp",
+        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 42. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        location: `MOUZA -  JAMTHA`
       },
        {
-        id: 18,
-        title: "Mahalaxmi Nagar-38",
-        image: "/ongoingProject6.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 38. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA -   MHASALA`
-      },
-      {
-        id: 19,
-        title: "Mahalaxmi Nagar-31",
-        image: "/ongoingProject8.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 31. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA -   PIPLA`
+        id: 15,
+        title: "Mahalaxmi Nagar - 43",
+        image: "/ongoingProject10.webp",
+        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 43. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        location: `MOUZA -  SHANKARPUR`
       },
        {
-        id: 20,
-        title: "Mahalaxmi Nagar-30",
-        image: "/ongoingProject9.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 30. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA -   TAKLI`
-      }
+        id: 15,
+        title: "Mahalaxmi Nagar - 45",
+        image: "/ongoingProject11.webp",
+        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 45. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        location: `MOUZA -  SHANKARPUR`
+      },
+      // {
+      //   id: 16,
+      //   title: "Mahalaxmi Nagar-40",
+      //   image: "/ongoingProject4.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 40. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+      //   location: `MOUZA -  KOTEWADA`
+      // },
+      //  {
+      //   id: 18,
+      //   title: "Mahalaxmi Nagar-38",
+      //   image: "/ongoingProject6.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 38. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+      //   location: `MOUZA -   MHASALA`
+      // },
+     
+      //  {
+      //   id: 20,
+      //   title: "Mahalaxmi Nagar-30",
+      //   image: "/ongoingProject9.webp",
+      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 30. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+      //   location: `MOUZA -   TAKLI`
+      // }
     ],
     upcoming: []
   }

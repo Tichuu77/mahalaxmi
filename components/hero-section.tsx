@@ -1,14 +1,51 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { ChevronDown, Play } from "lucide-react"
+import { useEffect, useState, useRef } from "react"
+import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const videoRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setIsVisible(true)
+
+    // Load Cloudinary Video Player script
+    const script = document.createElement('script')
+    script.src = 'https://unpkg.com/cloudinary-video-player@1.10.6/dist/cld-video-player.min.js'
+    script.async = true
+    document.body.appendChild(script)
+
+    // Load Cloudinary Video Player CSS
+    const link = document.createElement('link')
+    link.href = 'https://unpkg.com/cloudinary-video-player@1.10.6/dist/cld-video-player.min.css'
+    link.rel = 'stylesheet'
+    document.head.appendChild(link)
+
+    script.onload = () => {
+      // Initialize Cloudinary player
+      if (window.cloudinary && videoRef.current) {
+        const player = window.cloudinary.videoPlayer('cloudinary-player', {
+          cloud_name: 'dxujnm2sl',
+          publicId: 'Mahalaxmi_1_1_v6khvx',
+          controls: false,
+          autoplay: true,
+          loop: true,
+          muted: true,
+          fluid: false,
+          playsinline: true,
+          bigPlayButton: false,
+          showLogo: false,
+          preload: 'auto',
+        })
+      }
+    }
+
+    return () => {
+      document.body.removeChild(script)
+      document.head.removeChild(link)
+    }
   }, [])
 
   const stats = [
@@ -33,20 +70,23 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full h-screen overflow-hidden pt-16">
-      {/* Background Video */}
+      {/* Background Video - Cloudinary */}
       <div className="absolute inset-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="/Mahalaxmi (1).mp4" type="video/mp4" />
-          {/* Fallback image if video fails to load */}
-          <img src="/residential-horizon.png" alt="Hero background" className="w-full h-full object-cover" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+        <div ref={videoRef} className="w-full h-full">
+          <video
+            id="cloudinary-player"
+            className="cld-video-player"
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              position: 'absolute',
+              top: 0,
+              left: 0
+            }}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none" />
       </div>
 
       {/* Content */}
@@ -58,7 +98,7 @@ export default function HeroSection() {
           }`}
         >
           <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-          <span className="text-white text-sm font-medium">Premium Real Estate in Nagpur</span>
+          <span className="text-white text-[6px] md:text-sm font-medium">Premium Real Estate in Nagpur</span>
         </div>
 
         {/* Main Heading */}
@@ -66,7 +106,7 @@ export default function HeroSection() {
           {["Building Trust,", "Transforming Spaces"].map((line, idx) => (
             <h1
               key={idx}
-              className={`text-5xl md:text-7xl font-bold text-white transition-all duration-700 ${
+              className={`text-xl md:text-7xl font-bold text-white transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${(idx + 1) * 100}ms` }}
@@ -85,14 +125,14 @@ export default function HeroSection() {
         >
           <Button
             onClick={() => handleScrollToSection("our-projects")}
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-6 text-lg rounded-full cursor-pointer"
+            className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 md:px-8 md:py-6 text-xm md:text-lg rounded-full cursor-pointer"
           >
             Explore Projects
           </Button>
           <Button
             onClick={() => handleScrollToSection("services")}
             variant="outline"
-            className="border-white text-white hover:bg-white/10 px-8 py-6 text-lg rounded-full gap-2 bg-transparent cursor-pointer"
+            className="border-white text-white hover:bg-white/10 px-4 py-3 md:px-8 md:py-6 text-xm md:text-lg rounded-full gap-2 bg-transparent cursor-pointer"
           >
             Our Services 
           </Button>
@@ -100,7 +140,7 @@ export default function HeroSection() {
 
         {/* Stats Cards */}
         <div
-          className={`grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 transition-all duration-700 ${
+          className={`grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 transition-all  hidden  md:grid duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionDelay: "400ms" }}
@@ -129,4 +169,13 @@ export default function HeroSection() {
       </div>
     </section>
   )
+}
+
+// TypeScript declaration for Cloudinary
+declare global {
+  interface Window {
+    cloudinary: {
+      videoPlayer: (elementId: string, options: any) => any;
+    };
+  }
 }
