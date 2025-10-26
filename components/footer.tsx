@@ -86,7 +86,7 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center gap-4">
-              {[{icon:Phone,link:"tel:+918766887828"} , {icon:Mail,link:"mailto:girishpatankar7@gmail.com"},{icon:Instagram,link:"https://www.instagram.com/akashtikhat50/"} ].map((obj, idx) => (
+              {[{icon:Phone,link:"tel:+918766887828"} , {icon:Mail,link:"mailto:girishpatankar7@gmail.com"} ].map((obj, idx) => (
                 <a
                   key={idx}
                   href= {obj.link}

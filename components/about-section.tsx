@@ -85,7 +85,7 @@ export default function AboutSection() {
               {/* Large Image */}
               <div className="col-span-2 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <img
-                  src="/luxury-residential-complex-with-modern-architectur.jpg"
+                  src="/aboutUs1.jpg"
                   alt="Project showcase"
                   className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -94,14 +94,14 @@ export default function AboutSection() {
               {/* Small Images */}
               <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <img
-                  src="/modern-apartment-exterior.png"
+                  src="/aboutUs2.jpg"
                   alt="Project detail"
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow">
                 <img
-                  src="/residential-community-with-green-spaces.jpg"
+                  src="/aboutUs3.jpg"
                   alt="Community view"
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
