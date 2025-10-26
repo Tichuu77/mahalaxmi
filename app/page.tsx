@@ -15,6 +15,9 @@ import Footer from "@/components/footer"
 import OurProjects from "@/components/our-projects"
 import AmenitiesSection from "@/components/amenities"
 import ProjectHighlightsSection from "@/components/project-highlights"
+import InvestmentHighlightsSection from "@/components/investment-highlights-section"
+import UserGuideSection from "@/components/user-guied-section"
+import BlogSection from "@/components/blog-section"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -39,8 +42,11 @@ export default function Home() {
       <ServicesSection />
       <AmenitiesSection/>
       <ProjectHighlightsSection/>
+      <InvestmentHighlightsSection/>
+      <UserGuideSection  />
       <TestimonialsSection />
       <GallerySection />
+      <BlogSection/>
       <ContactSection />
       <WhatsAppButton />
       <Footer />

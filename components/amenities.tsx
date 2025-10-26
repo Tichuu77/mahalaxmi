@@ -5,6 +5,7 @@ import { Home, Droplets, Waves, Zap, Trees, Dribbble, Users, Building, Fence, Ba
 
 export default function AmenitiesSection() {
   const [isVisible, setIsVisible] = useState(false)
+  const [hoveredId, setHoveredId] = useState<number | null>(null)
   const sectionRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -14,7 +15,7 @@ export default function AmenitiesSection() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     )
 
     if (sectionRef.current) {
@@ -112,64 +113,141 @@ export default function AmenitiesSection() {
   ]
 
   return (
-    <section id="amenities" ref={sectionRef} className="py-20 px-4 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="amenities" ref={sectionRef} className="relative py-16 md:py-24 lg:py-32 px-4 sm:px-6 overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-blue-50" />
+      <div className="absolute top-0 left-0 w-full h-full opacity-30">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-20 left-1/2 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-            <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider">Premium Amenities</span>
+        <div className={`text-center mb-12 md:mb-20 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-md">
+            <div className="relative">
+              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+              <div className="absolute inset-0 w-2 h-2 bg-emerald-500 rounded-full animate-ping" />
+            </div>
+            <span className="text-emerald-600 font-semibold text-xs sm:text-sm uppercase tracking-wider">Premium Amenities</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Amenities that Enhance Your Lifestyle
+          
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 md:mb-6 px-4">
+            Amenities that
+            <span className="block mt-2 bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+              Enhance Your Lifestyle
+            </span>
           </h2>
-          <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+          
+          <p className="text-slate-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed px-4">
             Experience a perfect balance of comfort and convenience with world-class amenities designed to elevate your everyday living.
             At <strong className="text-emerald-600">Mahalaxmi Developers</strong>, every detail is crafted to enhance your lifestyle and well-being.
           </p>
         </div>
 
         {/* Amenities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {amenities.map((amenity, index) => {
             const Icon = amenity.icon
+            const isHovered = hoveredId === amenity.id
+            
             return (
               <div
                 key={amenity.id}
-                className={`group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-slate-100 overflow-hidden ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                onMouseEnter={() => setHoveredId(amenity.id)}
+                onMouseLeave={() => setHoveredId(null)}
+                className={`group relative bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 border border-white/50 overflow-hidden cursor-pointer ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
                 style={{
-                  transitionDelay: `${index * 0.08}s`
+                  transitionDelay: `${index * 0.06}s`
                 }}
               >
-                {/* Background Gradient on Hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${amenity.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+                {/* Animated Background Gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${amenity.color} opacity-0 group-hover:opacity-10 transition-all duration-700`} />
                 
-                {/* Icon with Gradient Background */}
-                <div className="relative mb-4">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${amenity.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                    <Icon className="w-8 h-8 text-white" />
+                {/* Decorative Corner Elements */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-white/50 to-transparent rounded-tr-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Icon Section */}
+                <div className="relative mb-6">
+                  <div className="relative inline-block">
+                    {/* Main Icon Container */}
+                    <div className={`relative w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${amenity.color} rounded-2xl sm:rounded-3xl flex items-center justify-center shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-700 z-10`}>
+                      <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white drop-shadow-lg" />
+                    </div>
+                    
+                    {/* Outer Animated Rings */}
+                    <div className={`absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${amenity.color} rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-30 group-hover:scale-125 transition-all duration-700`} />
+                    <div className={`absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${amenity.color} rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-1000 delay-100`} />
                   </div>
-                  {/* Animated Ring */}
-                  <div className={`absolute inset-0 w-16 h-16 bg-gradient-to-br ${amenity.color} rounded-2xl opacity-0 group-hover:opacity-20 group-hover:scale-125 transition-all duration-500`} />
+                  
+                  {/* Floating Number Badge */}
+                  <div className={`absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br ${amenity.color} rounded-full flex items-center justify-center text-white font-bold text-xs shadow-lg transform transition-all duration-500 ${isHovered ? 'scale-110 rotate-12' : 'scale-100'}`}>
+                    {String(amenity.id).padStart(2, '0')}
+                  </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
-                  {amenity.title}
-                </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  {amenity.description}
-                </p>
+                <div className="relative">
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors duration-500 leading-tight">
+                    {amenity.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
+                    {amenity.description}
+                  </p>
+                </div>
 
-                {/* Bottom Accent Line */}
-                <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${amenity.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
+                {/* Bottom Accent Line with Glow */}
+                <div className="absolute bottom-0 left-0 right-0">
+                  <div className={`h-1.5 bg-gradient-to-r ${amenity.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left`} />
+                  <div className={`h-1 bg-gradient-to-r ${amenity.color} blur-sm transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left opacity-60`} />
+                </div>
               </div>
             )
           })}
         </div>
+
+        {/* Bottom CTA Section */}
+        <div className={`mt-16 md:mt-24 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-white/50">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
+                <Building className="w-6 h-6 text-white" />
+              </div>
+              <div className="text-left">
+                <p className="text-slate-900 font-bold text-lg">Ready to Experience Luxury?</p>
+                <p className="text-slate-600 text-sm">Schedule a site visit today</p>
+              </div>
+            </div>
+            <a href="https://wa.me/+918766887828">
+              <button className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 whitespace-nowrap hover:cursor-pointer">
+              Contact Us
+            </button>
+            </a>
+            
+          </div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes blob {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -50px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
     </section>
   )
 }
