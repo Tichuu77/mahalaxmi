@@ -19,8 +19,8 @@ export default function Footer() {
           {/* Column 1 - Logo & Description */}
           <div>
             <div className="flex items-center gap-2 mb-4 cursor-pointer hover:opacity-80 transition-opacity">
-              <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-lg flex items-center justify-center">
-                <Building2 className="w-5 h-5 text-white" />
+              <div className="w-20 h-12 bg-gradient-to-br from-water-400 to-water-500 rounded-lg flex items-center justify-center">
+                <img src="/mahalaxmi-logo.png" alt="Logo" className="w-18 h-12" />
               </div>
               <span className="font-bold text-lg text-white">Mahalaxmi Group</span>
             </div>
