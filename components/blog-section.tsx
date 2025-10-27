@@ -83,8 +83,8 @@ export default function BlogSection() {
   ]
 
   const categories = [
-    { id: "all", label: "All Articles" },
-    { id: "investment", label: "Investment Tips" },
+    { id: "all", label: "All" },
+    { id: "investment", label: "Investment" },
     { id: "lifestyle", label: "Lifestyle" },
   ]
 
@@ -94,17 +94,20 @@ export default function BlogSection() {
   const displayedArticles = showMore ? filteredArticles : filteredArticles.slice(0, 4)
 
   return (
-    <section id="blog" className="py-16 md:py-24 px-4 md:px-8 bg-white">
+    <section id="blog" className="py-10 sm:py-14 md:py-24 px-3 sm:px-6 md:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">News & Articles</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 sm:mb-4">
+            News & Articles
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
             Stay updated with the latest insights and trends in real estate
           </p>
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -112,9 +115,9 @@ export default function BlogSection() {
                 setActiveCategory(category.id)
                 setShowMore(false)
               }}
-              className={`px-4 md:px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-300 cursor-pointer ${
+              className={`px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? "bg-emerald-500 text-white shadow-lg"
+                  ? "bg-emerald-500 text-white shadow-md"
                   : "bg-slate-100 text-slate-700 hover:bg-slate-200"
               }`}
             >
@@ -124,29 +127,31 @@ export default function BlogSection() {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 md:gap-8">
           {displayedArticles.map((article) => (
             <article
               key={article.id}
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-emerald-500 group cursor-pointer"
             >
-              <div className="relative overflow-hidden h-48 md:h-40">
+              <div className="relative overflow-hidden h-36 sm:h-44 md:h-40">
                 <img
                   src={article.image || "/placeholder.svg"}
                   alt={article.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
-                <div className="absolute top-3 right-3 bg-emerald-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-emerald-500 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold">
                   {article.category === "investment" ? "💰" : "🏡"} {article.category}
                 </div>
               </div>
 
-              <div className="p-4 md:p-5">
-                <h3 className="font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-emerald-600 transition-colors">
+              <div className="p-3 sm:p-4 md:p-5">
+                <h3 className="font-semibold sm:font-bold text-slate-900 mb-1 sm:mb-2 text-xs sm:text-sm md:text-base line-clamp-2 group-hover:text-emerald-600 transition-colors">
                   {article.title}
                 </h3>
-                <p className="text-sm text-slate-600 mb-4 line-clamp-2">{article.excerpt}</p>
-                <div className="flex items-center justify-between text-xs text-slate-500">
+                <p className="text-[10px] sm:text-xs md:text-sm text-slate-600 mb-2 sm:mb-4 line-clamp-2">
+                  {article.excerpt}
+                </p>
+                <div className="flex items-center justify-between text-[10px] sm:text-xs text-slate-500">
                   <span>{article.date}</span>
                   <span>{article.readTime}</span>
                 </div>
@@ -155,10 +160,11 @@ export default function BlogSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        {/* Show More Button */}
+        <div className="text-center mt-8 sm:mt-12">
           <button
             onClick={() => setShowMore(!showMore)}
-            className="px-8 py-3 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition-colors cursor-pointer"
+            className="px-5 sm:px-8 py-2 sm:py-3 bg-emerald-500 text-white rounded-lg font-medium sm:font-semibold hover:bg-emerald-600 transition-colors text-sm sm:text-base"
           >
             {showMore ? "Show Less Articles" : "Read More Articles"}
           </button>

@@ -18,6 +18,7 @@ import ProjectHighlightsSection from "@/components/project-highlights"
 import InvestmentHighlightsSection from "@/components/investment-highlights-section"
 import UserGuideSection from "@/components/user-guied-section"
 import BlogSection from "@/components/blog-section"
+import CallButton from "@/components/call-button"
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -48,6 +49,7 @@ export default function Home() {
       <GallerySection />
       <BlogSection/>
       <ContactSection />
+      <CallButton/>
       <WhatsAppButton />
       <Footer />
     </main>
