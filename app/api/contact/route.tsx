@@ -1,6 +1,6 @@
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || "re_qBbqYpjv_MGVbXuumshB5BNMSxWawpkwh")
 
 export async function POST(req: Request) {
   try {
@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // you can use a custom domain later
-      to: "akashtikhat50@gmail.com", // your destination email
+      to: "girishpatankar7@gmail.com", // your destination email
       subject: `New Contact Message: ${subject}`,
       html: `
         <h2>New Message from Website</h2>
