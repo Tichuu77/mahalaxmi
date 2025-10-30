@@ -106,7 +106,7 @@ export default function HeroSection() {
           {["Design the future of living with Mahalaxmi Developers Nagpur,", "Our Location- Besa, beltarodi, shankarpur, jamtha, koradi, gumgaon, kothewada, mohgaon umred road"].map((line, idx) => (
             <h1
               key={idx}
-              className={`text-xl md:text-4xl font-bold text-white transition-all duration-700 ${
+              className={`text-[15px] md:text-4xl font-bold text-white transition-all duration-700 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${(idx + 1) * 100}ms` }}
