@@ -90,7 +90,7 @@ export default function ContactSection() {
             }`}
           >
             <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6 sm:mb-8">
-              Contact Us
+              Get in Touch
             </h2>
 
             <div className="space-y-3 sm:space-y-4">
