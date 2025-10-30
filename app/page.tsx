@@ -36,19 +36,19 @@ export default function Home() {
     <main className="bg-background text-foreground">
       <Header isScrolled={isScrolled} />
       <HeroSection />
-      <AboutSection />
+      <ContactSection />
       <StatsSection />
       <OurProjects />
       {/* <StoriesSection /> */}
       <ServicesSection />
       <AmenitiesSection/>
+      <AboutSection />
       <ProjectHighlightsSection/>
       <InvestmentHighlightsSection/>
       <UserGuideSection  />
       <TestimonialsSection />
       <GallerySection />
       <BlogSection/>
-      <ContactSection />
       <CallButton/>
       <WhatsAppButton />
       <Footer />

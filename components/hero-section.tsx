@@ -103,7 +103,7 @@ export default function HeroSection() {
 
         {/* Main Heading */}
         <div className="space-y-4 mb-8 max-w-4xl">
-          {["Building Trust,", "Transforming Spaces"].map((line, idx) => (
+          {["Designing the future of living with Mahalaxmi Developers Nagpur,", "Our location- Besa, beltarodi, shankarpur, jamtha, koradi, gumgoan, kothewada, mohgoan umred road"].map((line, idx) => (
             <h1
               key={idx}
               className={`text-[15px] md:text-4xl font-bold text-white transition-all duration-700 ${
@@ -124,17 +124,17 @@ export default function HeroSection() {
           style={{ transitionDelay: "300ms" }}
         >
           <Button
-            onClick={() => handleScrollToSection("our-projects")}
+            onClick={() => handleScrollToSection("contact")}
             className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 md:px-8 md:py-6 text-xm md:text-lg rounded-full cursor-pointer"
           >
-            Explore Projects
+            Contact Us
           </Button>
           <Button
-            onClick={() => handleScrollToSection("services")}
+            onClick={() => handleScrollToSection("our-projects")}
             variant="outline"
             className="border-white text-white hover:bg-white/10 px-4 py-3 md:px-8 md:py-6 text-xm md:text-lg rounded-full gap-2 bg-transparent cursor-pointer"
           >
-            Our Services 
+             Explore Projects
           </Button>
         </div>
 
