@@ -23,14 +23,7 @@ export default function OurProjects() {
 
   const projects = {
      ongoing: [
-      // {
-      //   id: 1,
-      //   title: "Tattva Apas",
-      //   image: "/ongoingProject1.webp",
-      //   description: `A SUPREME LIVING EXPERIENCE IN THE HEART OF THE CITY`,
-      //   location: `MOUZA - BELTARODI`
-      // },
-       {
+      {
         id: 2,
         title: "Mahalaxmi Nagar-31",
         image: "/ongoingProject8.webp",
@@ -72,32 +65,17 @@ export default function OurProjects() {
         description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 45. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
         location: `MOUZA -  SHANKARPUR`
       },
-      // {
-      //   id: 8,
-      //   title: "Mahalaxmi Nagar-40",
-      //   image: "/ongoingProject4.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 40. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-      //   location: `MOUZA -  KOTEWADA`
-      // },
-      //  {
-      //   id: 9,
-      //   title: "Mahalaxmi Nagar-38",
-      //   image: "/ongoingProject6.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 38. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-      //   location: `MOUZA -   MHASALA`
-      // },
-     
-      //  {
-      //   id: 10,
-      //   title: "Mahalaxmi Nagar-30",
-      //   image: "/ongoingProject9.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 30. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-      //   location: `MOUZA -   TAKLI`
-      // }
+       {
+        id: 11,
+        title: "Mahalaxmi Nagar - 47",
+        image: "/ongoingProject12.jpg",
+         description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 47. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        location: `MOUZA - NANDA, KORADI ROAD`
+      },
     ],
     completed: [
       {
-        id: 11,
+        id: 12,
         title: "Mahalaxmi Nagar - 37",
         image: "/completedProject1.webp",
         description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 37. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
@@ -105,82 +83,19 @@ export default function OurProjects() {
        
       },
       {
-        id: 12,
+        id: 13,
         title: "Mahalaxmi Nagar - 35",
         image: "/completedProject2.webp",
         description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 35. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
         location: `MOUZA - KOTEWADA`
       },
       {
-        id: 13,
+        id: 14,
         title: "Mahalaxmi Nagar - 34",
         image: "/completedProject3.webp",
          description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 34. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
         location: `MOUZA - BAHADURA`
       },
-      //  {
-      //   id: 14,
-      //   title: "Mahalaxmi Nagar - 33",
-      //   image: "/completedProject4.webp",
-      //   description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 33. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-      //   location: `MOUZA - JAMTHA`
-      // },
-      // {
-      //   id: 15,
-      //   title: "Mahalaxmi Nagar - 26",
-      //   image: "/completedProject5.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 26. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //   location: `MOUZA - KOTEWADA`
-      // },
-      //  {
-      //   id: 16,
-      //   title: "Mahalaxmi Nagar - 25",
-      //   image: "/completedProject6.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 25. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //   location: `MOUZA -  JAMTHA`
-      // },
-      //  {
-      //   id: 17,
-      //   title: "Mahalaxmi Nagar - 24",
-      //   image: "/completedProject7.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 24. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //   location: `MOUZA -  JAMTHA`
-      // },
-      // {
-      //   id: 18,
-      //   title: "Mahalaxmi Nagar - 23",
-      //   image: "/completedProject8.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 23. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //   location: `MOUZA -  JAMTHA`
-      // },
-      //  {
-      //   id: 19,
-      //   title: "Mahalaxmi Nagar - 22",
-      //   image: "/completedProject9.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 22. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //   location: `MOUZA -  GAVSI MANAPUR`
-      // },
-      //  {
-      //   id: 20,
-      //   title: "Mahalaxmi Nagar - 21",
-      //   image: "/completedProject10.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 21. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //   location: `MOUZA -   SHANKARPUR`
-      // },
-      //  {
-      //   id: 21,
-      //   title: "Mahalaxmi Nagar - 19",
-      //   image: "/completedProject11.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 19. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //   location: `MOUZA -   DONGARGAON`
-      // },
-      // {
-      //   id: 22,
-      //   title: "Mahalaxmi Nagar - 18",
-      //   image: "/completedProject12.webp",
-      //   description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 18. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank`,
-      //  location: `MOUZA -   JAMTHA`
-      // }
     ],
    
     upcoming: []
@@ -188,7 +103,7 @@ export default function OurProjects() {
 
   const tabs = [
     { id: "ongoing", label: "Ongoing Projects" },
-      { id: "completed", label: "Completed Projects" },
+    { id: "completed", label: "Completed Projects" },
     { id: "upcoming", label: "Upcoming Projects" }
   ]
 
@@ -198,12 +113,24 @@ export default function OurProjects() {
   }
 
   return (
-    <section id="our-projects" ref={sectionRef} className="py-10 sm:py-16 px-3 sm:px-6 bg-gradient-to-b from-white to-slate-50">
-      <div className="max-w-7xl mx-auto">
+    <section id="our-projects" ref={sectionRef} className="py-10 sm:py-16 px-3 sm:px-6 bg-gradient-to-b from-white via-orange-50/20 to-white relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900">
-            Our Projects
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 px-3 py-1.5 bg-orange-100 rounded-full">
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+            <span className="text-orange-700 font-bold text-xs sm:text-sm uppercase tracking-wider">Portfolio</span>
+          </div>
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-2 sm:mb-3">
+            Our <span className="text-orange-600">Projects</span>
           </h2>
+          <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+            Discover our exceptional residential developments across Nagpur
+          </p>
         </div>
 
         {/* Tabs */}
@@ -214,8 +141,8 @@ export default function OurProjects() {
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-emerald-600 text-white shadow-lg scale-105"
-                  : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
+                  ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg scale-105"
+                  : "bg-white text-slate-600 hover:bg-orange-50 hover:text-orange-600 border-2 border-slate-200 hover:border-orange-300"
               }`}
             >
               {tab.label}
@@ -229,7 +156,7 @@ export default function OurProjects() {
             <div
               key={project.id}
               ref={(el) => { projectRefs.current[index] = el }}
-              className={`group bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 ${
+              className={`group bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 border-2 border-transparent hover:border-orange-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 0.1}s` }}
@@ -238,9 +165,10 @@ export default function OurProjects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-3 right-3 px-2 py-1 rounded-full text-[10px] sm:text-xs font-semibold bg-emerald-600 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute top-3 right-3 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg">
                   {activeTab === "completed"
                     ? "Completed"
                     : activeTab === "ongoing"
@@ -250,28 +178,28 @@ export default function OurProjects() {
               </div>
 
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-orange-600 transition-colors">
                   {project.title}
                 </h3>
 
-                <details className="mb-4 sm:mb-6">
-                  <summary className="cursor-pointer font-medium text-slate-800 py-2 list-none border border-slate-200 flex items-center bg-green-50 px-3 sm:px-4 rounded-lg hover:bg-green-100 transition-colors duration-300 text-sm sm:text-base">
-                    Project Details
-                    <ChevronRight className="ml-2 w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 transform group-open:rotate-90" />
+                <details className="mb-4 sm:mb-6 group/details">
+                  <summary className="cursor-pointer font-medium text-slate-800 py-2 list-none border-2 border-orange-200 flex items-center bg-orange-50 px-3 sm:px-4 rounded-lg hover:bg-orange-100 hover:border-orange-300 transition-colors duration-300 text-sm sm:text-base">
+                    <span className="flex-1">Project Details</span>
+                    <ChevronRight className="ml-2 w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-open/details:rotate-90 text-orange-600" />
                   </summary>
-                  <p className="mt-2 text-slate-600 text-sm sm:text-base leading-relaxed">
+                  <p className="mt-3 text-slate-600 text-xs sm:text-sm leading-relaxed px-2">
                     {project.description}
                   </p>
                 </details>
 
-                <div className="mb-4 sm:mb-6 flex items-center text-sm sm:text-base">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
-                  <span className="ml-2 text-slate-600">{project.location}</span>
+                <div className="mb-4 sm:mb-6 flex items-start gap-2 p-2.5 sm:p-3 bg-orange-50 rounded-lg border border-orange-100">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-slate-700 text-xs sm:text-sm font-medium">{project.location}</span>
                 </div>
 
                 <Button
                   onClick={() => handleInquiry(project.title)}
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-2 sm:py-3 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base"
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base font-semibold shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
                 >
                   <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>Inquire Now</span>
@@ -281,6 +209,21 @@ export default function OurProjects() {
             </div>
           ))}
         </div>
+
+        {/* Empty State for Upcoming */}
+        {activeTab === "upcoming" && projects.upcoming.length === 0 && (
+          <div className="text-center py-12 sm:py-16">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+              <svg className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Exciting Projects Coming Soon!</h3>
+            <p className="text-slate-600 text-sm sm:text-base max-w-md mx-auto">
+              Stay tuned for our upcoming developments. Great things are on the horizon!
+            </p>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -1,57 +1,73 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react"
-import { ChevronDown } from "lucide-react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
-  const videoRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     setIsVisible(true)
 
-    // Load Cloudinary Video Player script
-    const script = document.createElement('script')
-    script.src = 'https://unpkg.com/cloudinary-video-player@1.10.6/dist/cld-video-player.min.js'
-    script.async = true
-    document.body.appendChild(script)
+    // Load Swiper CSS
+    const swiperCSS = document.createElement('link')
+    swiperCSS.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css'
+    swiperCSS.rel = 'stylesheet'
+    document.head.appendChild(swiperCSS)
 
-    // Load Cloudinary Video Player CSS
-    const link = document.createElement('link')
-    link.href = 'https://unpkg.com/cloudinary-video-player@1.10.6/dist/cld-video-player.min.css'
-    link.rel = 'stylesheet'
-    document.head.appendChild(link)
+    // Load Swiper JS
+    const swiperScript = document.createElement('script')
+    swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js'
+    swiperScript.async = true
+    document.body.appendChild(swiperScript)
 
-    script.onload = () => {
-      // Initialize Cloudinary player
-      if (window.cloudinary && videoRef.current) {
-        const player = window.cloudinary.videoPlayer('cloudinary-player', {
-          cloud_name: 'dxujnm2sl',
-          publicId: 'Mahalaxmi_1_1_v6khvx',
-          controls: false,
-          autoplay: true,
+    swiperScript.onload = () => {
+      // Initialize Swiper
+      if (window.Swiper) {
+        new window.Swiper('.hero-swiper', {
           loop: true,
-          muted: true,
-          fluid: false,
-          playsinline: true,
-          bigPlayButton: false,
-          showLogo: false,
-          preload: 'auto',
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          effect: 'fade',
+          fadeEffect: {
+            crossFade: true
+          },
+          speed: 1000,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
         })
       }
     }
 
     return () => {
-      document.body.removeChild(script)
-      document.head.removeChild(link)
+      if (document.head.contains(swiperCSS)) {
+        document.head.removeChild(swiperCSS)
+      }
+      if (document.body.contains(swiperScript)) {
+        document.body.removeChild(swiperScript)
+      }
     }
   }, [])
 
-  const stats = [
-    { number: "15,000+", label: "Satisfied Customers" },
-    { number: "67", label: "Projects Completed" },
-    { number: "880", label: "Acres Developed" },
+  const slides = [
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074415_banner_68c9154f2664a.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074800_banner_68c9163022c77.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074800_banner_68c91630250f5.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074821_banner_68c91645d8eeb.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074821_banner_68c91645da8ff.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074821_banner_68c91645dc3b2.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074850_banner_68c9166273485.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074850_banner_68c916627557e.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074850_banner_68c9166276e8f.webp",
+    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074913_banner_68c916796e52c.webp",
   ]
 
   const handleScrollToSection = (sectionId: string) => {
@@ -61,60 +77,69 @@ export default function HeroSection() {
     }
   }
 
-  const handleScrollDown = () => {
-    window.scrollBy({
-      top: window.innerHeight,
-      behavior: "smooth"
-    })
-  }
-
   return (
     <section className="relative w-full h-screen overflow-hidden pt-16">
-      {/* Background Video - Cloudinary */}
+      {/* Background Slider */}
       <div className="absolute inset-0">
-        <div ref={videoRef} className="w-full h-full">
-          <video
-            id="cloudinary-player"
-            className="cld-video-player"
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              position: 'absolute',
-              top: 0,
-              left: 0
-            }}
-          />
+        <div className="hero-swiper swiper w-full h-full">
+          <div className="swiper-wrapper">
+            {slides.map((slide, idx) => (
+              <div key={idx} className="swiper-slide">
+                <img
+                  src={slide}
+                  alt={`Mahalaxmi Developers ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+          
+          {/* Navigation */}
+          <div className="swiper-button-next text-white"></div>
+          <div className="swiper-button-prev text-white"></div>
+          
+          {/* Pagination */}
+          <div className="swiper-pagination"></div>
         </div>
+        
+        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none" />
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center justify-center px-4 text-center">
-        {/* Badge */}
-        <div
-          className={`mb-6 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 transition-all duration-700 ${
-            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-          }`}
-        >
-          <div className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-          <span className="text-white text-[6px] md:text-sm font-medium">Premium Real Estate in Nagpur</span>
-        </div>
-
+      <div className="relative h-full flex flex-col items-center justify-center px-4 text-center z-10">
         {/* Main Heading */}
         <div className="space-y-4 mb-8 max-w-4xl">
-          {["Designing the future of living with Mahalaxmi Developers Nagpur,", "Our location- Besa, beltarodi, shankarpur, jamtha, koradi, gumgoan, kothewada, mohgoan umred road"].map((line, idx) => (
-            <h1
-              key={idx}
-              className={`text-[15px] md:text-4xl font-bold text-white transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${(idx + 1) * 100}ms` }}
-            >
-              {line}
-            </h1>
-          ))}
+          <h1
+            className={`text-2xl md:text-4xl font-bold text-orange-500 transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "100ms" }}
+          >
+            Build Your Dream Home With Mahalaxmi Developers In Nagpur.
+          </h1>
         </div>
+
+        <div className="space-y-4 mb-8 max-w-4xl">
+          <h1
+            className={`text-2xl md:text-4xl font-bold text-white transition-all duration-700 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+          >
+            Residential & Commercial Plots Heart Of City Nagpur.
+          </h1>
+        </div>
+
+        <div className="py-1 px-4 md:px-6 bg-orange-500 mb-3">
+          <h3 className="text-xs md:text-lg text-white font-light">
+            NMRDA SANCTIONS RL REAL APPROVAL PROJECTS
+          </h3>
+        </div>
+
+        <p className="text-white text-xl md:text-2xl font-extralight mb-3">
+          Location- Besa, Beltarodi, Shankarpur, Wrdha Road, Jamtha, Dongargoan, Mohagoan & Hingna.
+        </p>
 
         {/* CTA Buttons */}
         <div
@@ -125,57 +150,31 @@ export default function HeroSection() {
         >
           <Button
             onClick={() => handleScrollToSection("contact")}
-            className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 md:px-8 md:py-6 text-xm md:text-lg rounded-full cursor-pointer"
+            className="bg-orange-500 hover:bg-orange-700 text-white px-4 py-3 md:px-8 md:py-6 text-sm md:text-lg cursor-pointer"
           >
             Contact Us
           </Button>
           <Button
             onClick={() => handleScrollToSection("our-projects")}
-            variant="outline"
-            className="border-white text-white hover:bg-white/10 px-4 py-3 md:px-8 md:py-6 text-xm md:text-lg rounded-full gap-2 bg-transparent cursor-pointer"
+            className="bg-orange-500 hover:bg-orange-700 px-4 py-3 md:px-8 md:py-6 text-sm md:text-lg cursor-pointer"
           >
-             Explore Projects
+            Explore Projects
           </Button>
         </div>
 
-        {/* Stats Cards */}
-        <div
-          className={`grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 transition-all  hidden  md:grid duration-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-          style={{ transitionDelay: "400ms" }}
-        >
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="px-6 py-4 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer"
-            >
-              <div className="text-3xl font-bold text-emerald-400">{stat.number}</div>
-              <div className="text-white/80 text-sm mt-1">{stat.label}</div>
-            </div>
-          ))}
+        <div className="bg-orange-500 py-3 px-6 rounded">
+          <h3 className="text-white text-sm md:text-base">
+            Best For Investment @ 18 lakh only on Wardha Road
+          </h3>
         </div>
-
-        {/* Scroll Indicator */}
-        <button
-          onClick={handleScrollDown}
-          className={`absolute bottom-8 transition-all duration-700 cursor-pointer hover:scale-110 ${isVisible ? "opacity-100" : "opacity-0"}`}
-        >
-          <div className="flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-white/60 text-sm">Scroll to explore</span>
-            <ChevronDown className="w-5 h-5 text-emerald-400" />
-          </div>
-        </button>
       </div>
     </section>
   )
 }
 
-// TypeScript declaration for Cloudinary
+// TypeScript declaration for Swiper
 declare global {
   interface Window {
-    cloudinary: {
-      videoPlayer: (elementId: string, options: any) => any;
-    };
+    Swiper: any;
   }
 }

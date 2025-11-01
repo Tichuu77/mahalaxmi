@@ -63,11 +63,11 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section id="testimonials" className="py-16 md:py-20 px-4 bg-gradient-to-b from-white to-slate-50">
+    <section id="testimonials" className="py-16 md:py-20 px-4 bg-gradient-to-b from-white to-orange-50">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-2">
-            What Our <span className="text-emerald-600">Clients Say?</span>
+            What Our <span className="text-orange-600">Clients Say?</span>
           </h2>
           <p className="text-slate-600 text-base md:text-lg">Hear from our satisfied customers</p>
         </div>
@@ -82,11 +82,11 @@ export default function TestimonialsSection() {
                   index === currentSlide ? "opacity-100 scale-100" : "opacity-0 scale-95"
                 }`}
               >
-                <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg h-full flex flex-col justify-between">
+                <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg h-full flex flex-col justify-between border border-orange-100">
                   {/* Stars */}
                   <div className="flex gap-1 mb-3 sm:mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-emerald-500 text-emerald-500" />
+                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-orange-500 text-orange-500" />
                     ))}
                   </div>
 
@@ -100,11 +100,11 @@ export default function TestimonialsSection() {
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-emerald-500"
+                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-orange-500"
                     />
                     <div>
                       <p className="font-semibold text-slate-900 text-base sm:text-lg">{testimonial.name}</p>
-                      <p className="text-emerald-600 text-sm sm:text-base font-medium">{testimonial.location}</p>
+                      <p className="text-orange-600 text-sm sm:text-base font-medium">{testimonial.location}</p>
                     </div>
                   </div>
                 </div>
@@ -115,14 +115,14 @@ export default function TestimonialsSection() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute -left-4 sm:-left-10 md:-left-16 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-emerald-600 hover:bg-emerald-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 text-white"
+            className="absolute -left-4 sm:-left-10 md:-left-16 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-600 hover:bg-orange-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 text-white"
           >
             <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           <button
             onClick={nextSlide}
-            className="absolute -right-4 sm:-right-10 md:-right-16 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-emerald-600 hover:bg-emerald-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 text-white"
+            className="absolute -right-4 sm:-right-10 md:-right-16 top-1/2 -translate-y-1/2 z-10 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-orange-600 hover:bg-orange-700 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110 text-white"
           >
             <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
@@ -134,7 +134,7 @@ export default function TestimonialsSection() {
                 key={idx}
                 onClick={() => goToSlide(idx)}
                 className={`h-2.5 sm:h-3 rounded-full transition-all duration-300 cursor-pointer ${
-                  idx === currentSlide ? "bg-emerald-600 w-6 sm:w-8" : "bg-slate-300 hover:bg-slate-400 w-2.5 sm:w-3"
+                  idx === currentSlide ? "bg-orange-600 w-6 sm:w-8" : "bg-slate-300 hover:bg-slate-400 w-2.5 sm:w-3"
                 }`}
               />
             ))}

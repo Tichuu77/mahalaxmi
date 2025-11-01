@@ -79,11 +79,11 @@ export default function GallerySection() {
     <section
       id="gallery"
       ref={sectionRef}
-      className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden"
+      className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-orange-50/30 to-white relative overflow-hidden"
     >
       {/* Background Decoration */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute top-20 left-10 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -92,13 +92,13 @@ export default function GallerySection() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-purple-100 rounded-full">
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-            <span className="text-purple-700 font-bold text-xs sm:text-sm uppercase tracking-wider">Our Gallery</span>
+          <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 bg-orange-100 rounded-full">
+            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+            <span className="text-orange-700 font-bold text-xs sm:text-sm uppercase tracking-wider">Our Gallery</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-3 sm:mb-4">
             Explore Our{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-500">
               Masterpieces
             </span>
           </h2>
@@ -124,7 +124,7 @@ export default function GallerySection() {
                       className="w-full h-64 object-cover"
                       onClick={() => setSelectedImage(index)}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-4">
+                    <div className="absolute inset-0   to-transparent flex items-end p-4">
                       <div className="text-white">
                         <p className="font-bold text-lg">{image.alt}</p>
                         <p className="text-xs text-white/80">Tap to view full size</p>
@@ -138,15 +138,15 @@ export default function GallerySection() {
             {/* Slider Controls */}
             <button
               onClick={prevSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all"
+              className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-orange-500 hover:text-white transition-all"
             >
-              <ChevronLeft className="w-5 h-5 text-slate-900" />
+              <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white transition-all"
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-orange-500 hover:text-white transition-all"
             >
-              <ChevronRight className="w-5 h-5 text-slate-900" />
+              <ChevronRight className="w-5 h-5" />
             </button>
 
             {/* Dots Indicator */}
@@ -156,7 +156,7 @@ export default function GallerySection() {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`h-2 rounded-full transition-all duration-300 ${
-                    currentSlide === index ? "w-8 bg-purple-600" : "w-2 bg-slate-300"
+                    currentSlide === index ? "w-8 bg-orange-600" : "w-2 bg-slate-300"
                   }`}
                 />
               ))}
@@ -173,7 +173,7 @@ export default function GallerySection() {
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
-              className={`relative overflow-hidden rounded-2xl cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-500 ${
+              className={`relative overflow-hidden rounded-2xl cursor-pointer group shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-orange-400 ${
                 index === 0 || index === 5 ? "lg:col-span-2 lg:row-span-2" : ""
               } ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
               style={{ transitionDelay: `${index * 50}ms` }}
@@ -186,7 +186,7 @@ export default function GallerySection() {
                   index === 0 || index === 5 ? "h-96" : "h-48"
                 }`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-t from-orange-900/70 via-orange-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center">
                 <Maximize2 className="w-10 h-10 text-white mb-2 transform scale-0 group-hover:scale-100 transition-transform duration-300" />
                 <p className="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                   {image.alt}
@@ -212,7 +212,7 @@ export default function GallerySection() {
             />
 
             {/* Image Info */}
-            <div className="absolute bottom-4 left-4 right-4 bg-white/10 backdrop-blur-md rounded-lg p-4 text-white">
+            <div className="absolute bottom-4 left-4 right-4 bg-orange-500/20 backdrop-blur-md rounded-lg p-4 text-white border border-orange-400/30">
               <p className="font-bold text-lg">{galleryImages[selectedImage].alt}</p>
               <p className="text-sm text-white/80">
                 {selectedImage + 1} / {galleryImages.length}
@@ -222,7 +222,7 @@ export default function GallerySection() {
             {/* Close Button */}
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full p-3 transition-all hover:scale-110"
+              className="absolute top-4 right-4 bg-orange-500/80 hover:bg-orange-600 backdrop-blur-md text-white rounded-full p-3 transition-all hover:scale-110 shadow-lg"
             >
               <X className="w-6 h-6" />
             </button>
@@ -230,13 +230,13 @@ export default function GallerySection() {
             {/* Navigation Arrows */}
             <button
               onClick={prevModalImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full p-3 transition-all hover:scale-110"
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-orange-500/80 hover:bg-orange-600 backdrop-blur-md text-white rounded-full p-3 transition-all hover:scale-110 shadow-lg"
             >
               <ChevronLeft className="w-8 h-8" />
             </button>
             <button
               onClick={nextModalImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-md text-white rounded-full p-3 transition-all hover:scale-110"
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-orange-500/80 hover:bg-orange-600 backdrop-blur-md text-white rounded-full p-3 transition-all hover:scale-110 shadow-lg"
             >
               <ChevronRight className="w-8 h-8" />
             </button>

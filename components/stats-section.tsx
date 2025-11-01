@@ -29,30 +29,30 @@ export default function StatsSection() {
       icon: Users,
       number: "15,000+",
       label: "Satisfied Customers",
-      color: "from-emerald-500 to-emerald-600",
+      color: "from-orange-500 to-orange-600",
     },
     {
       icon: Building2,
       number: "67",
       label: "Projects Complete",
-      color: "from-blue-500 to-blue-600",
+      color: "from-orange-500 to-orange-600",
     },
     {
       icon: Leaf,
       number: "880",
       label: "Acres Completed",
-      color: "from-green-500 to-green-600",
+      color: "from-orange-500 to-orange-600",
     },
     {
       icon: Award,
       number: "95%",
       label: "Customer Satisfaction",
-      color: "from-amber-500 to-amber-600",
+      color: "from-orange-500 to-orange-600",
     },
   ]
 
   return (
-    <section id="stats" ref={sectionRef} className="py-6 sm:py-16 md:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
+    <section id="stats" ref={sectionRef} className="py-6 sm:py-16 md:py-20 px-3 sm:px-6 lg:px-8 bg-gradient-to-b from-orange-50 to-white">
       <div className="max-w-7xl mx-auto">
         {/* 2 columns on mobile, 4 on desktop with minimal gaps */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
@@ -61,7 +61,7 @@ export default function StatsSection() {
             return (
               <div
                 key={idx}
-                className={`group p-3 sm:p-6 md:p-8 bg-white rounded-lg sm:rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 ${
+                className={`group p-3 sm:p-6 md:p-8 bg-white rounded-lg sm:rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2 border border-orange-100 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
                 style={{ transitionDelay: `${idx * 100}ms` }}

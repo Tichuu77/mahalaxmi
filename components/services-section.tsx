@@ -54,7 +54,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-xl sm:text-3xl md:text-5xl font-bold text-white mb-2 sm:mb-4">
-            Why Choose <span className="text-emerald-400">Us</span>
+            Why Choose <span className="text-orange-400">Us</span>
           </h2>
           <p className="hidden sm:block text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
             Comprehensive services designed to make your real estate journey
@@ -69,7 +69,7 @@ export default function ServicesSection() {
             return (
               <div
                 key={idx}
-                className={`p-4 sm:p-5 md:p-8 bg-slate-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl border border-slate-700 hover:border-emerald-500 hover:bg-slate-800 transition-all duration-300 ${
+                className={`p-4 sm:p-5 md:p-8 bg-slate-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl border border-slate-700 hover:border-orange-500 hover:bg-slate-800 transition-all duration-300 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-6"
@@ -77,7 +77,7 @@ export default function ServicesSection() {
                 style={{ transitionDelay: `${idx * 80}ms` }}
               >
                 {/* Icon */}
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
 

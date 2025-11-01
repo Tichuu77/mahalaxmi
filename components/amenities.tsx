@@ -31,95 +31,95 @@ export default function AmenitiesSection() {
       title: "Internal Cement Concrete Road",
       description: "A paved road within the premises connecting all major parts",
       icon: Home,
-      color: "from-emerald-400 to-emerald-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 2,
       title: "Garden",
       description: "Landscaped green space with plantation for better experience",
       icon: Trees,
-      color: "from-green-400 to-green-600"
+      color: "from-orange-500 to-orange-700"
     },
     {
       id: 3,
       title: "Sewage Treatment Plant",
       description: "Eco-friendly waste management system",
       icon: Droplets,
-      color: "from-blue-400 to-blue-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 4,
       title: "Sewage Line",
       description: "Underground waste disposal system in layout",
       icon: Waves,
-      color: "from-cyan-400 to-cyan-600"
+      color: "from-orange-500 to-orange-700"
     },
     {
       id: 5,
       title: "Storm Water Drainage",
       description: "Efficient water management system",
       icon: Waves,
-      color: "from-sky-400 to-sky-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 6,
       title: "Cricket Pitch",
       description: "A dedicated pitch area for cricket sport",
       icon: CircleDot,
-      color: "from-orange-400 to-orange-600"
+      color: "from-orange-500 to-orange-700"
     },
     {
       id: 7,
       title: "Electric Network",
       description: "Electricity distribution infrastructure",
       icon: Zap,
-      color: "from-yellow-400 to-yellow-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 8,
       title: "Open Space Public Utility",
       description: "Open-use area for all residents",
       icon: Users,
-      color: "from-purple-400 to-purple-600"
+      color: "from-orange-500 to-orange-700"
     },
     {
       id: 9,
       title: "Compound Wall",
       description: "Fenced boundary for safety",
       icon: Fence,
-      color: "from-slate-400 to-slate-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 10,
       title: "Kids Park",
       description: "A playground for children",
       icon: Baby,
-      color: "from-pink-400 to-pink-600"
+      color: "from-orange-500 to-orange-700"
     },
     {
       id: 11,
       title: "Basketball Court",
       description: "Court for outdoor sports",
       icon: Dribbble,
-      color: "from-red-400 to-red-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 12,
       title: "Meditation Centre",
       description: "Space for contemplation",
       icon: Flower2,
-      color: "from-indigo-400 to-indigo-600"
+      color: "from-orange-500 to-orange-700"
     }
   ]
 
   return (
     <section id="amenities" ref={sectionRef} className="relative py-12 md:py-24 lg:py-32 px-4 sm:px-6 overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-blue-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-orange-100" />
       <div className="absolute top-0 left-0 w-full h-full opacity-30">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-        <div className="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-20 left-1/2 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
+        <div className="absolute top-20 left-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+        <div className="absolute top-40 right-10 w-72 h-72 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-20 left-1/2 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -127,21 +127,21 @@ export default function AmenitiesSection() {
         <div className={`text-center mb-8 md:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center gap-2 mb-3 px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full shadow-md">
             <div className="relative">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <div className="absolute inset-0 w-2 h-2 bg-emerald-500 rounded-full animate-ping" />
+              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+              <div className="absolute inset-0 w-2 h-2 bg-orange-500 rounded-full animate-ping" />
             </div>
-            <span className="text-emerald-600 font-semibold text-xs uppercase tracking-wider">Premium Amenities</span>
+            <span className="text-orange-600 font-semibold text-xs uppercase tracking-wider">Premium Amenities</span>
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-3 md:mb-6 px-4">
             Amenities that
-            <span className="block mt-1 md:mt-2 bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block mt-1 md:mt-2 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-700 bg-clip-text text-transparent">
               Enhance Your Lifestyle
             </span>
           </h2>
           
           <p className="text-slate-600 text-sm sm:text-base md:text-xl max-w-3xl mx-auto leading-relaxed px-4">
-            Experience comfort and convenience with world-class amenities at <strong className="text-emerald-600">Mahalaxmi Developers</strong>.
+            Experience comfort and convenience with world-class amenities at <strong className="text-orange-600">Mahalaxmi Developers</strong>.
           </p>
         </div>
 
@@ -191,7 +191,7 @@ export default function AmenitiesSection() {
 
                 {/* Content - More Compact on Mobile */}
                 <div className="relative">
-                  <h3 className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold text-slate-900 mb-1.5 sm:mb-2 md:mb-3 group-hover:text-emerald-600 transition-colors duration-500 leading-tight line-clamp-2">
+                  <h3 className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold text-slate-900 mb-1.5 sm:mb-2 md:mb-3 group-hover:text-orange-600 transition-colors duration-500 leading-tight line-clamp-2">
                     {amenity.title}
                   </h3>
                   <p className="text-[10px] sm:text-xs md:text-sm lg:text-base text-slate-600 leading-snug md:leading-relaxed group-hover:text-slate-700 transition-colors duration-300 line-clamp-2 md:line-clamp-none">
@@ -213,7 +213,7 @@ export default function AmenitiesSection() {
         <div className={`mt-8 sm:mt-12 md:mt-24 text-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 md:gap-6 bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl border border-white/50">
             <div className="flex items-center gap-2 sm:gap-3">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-full flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
                 <Building className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="text-left">
@@ -222,7 +222,7 @@ export default function AmenitiesSection() {
               </div>
             </div>
             <a href="https://wa.me/+918766887828">
-              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-emerald-600 to-blue-600 text-white font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 whitespace-nowrap hover:cursor-pointer text-sm sm:text-base">
+              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 whitespace-nowrap hover:cursor-pointer text-sm sm:text-base">
                 Contact Us
               </button>
             </a>

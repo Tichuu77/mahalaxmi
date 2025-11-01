@@ -57,9 +57,9 @@ export default function UserGuideSection() {
                 <div className="hidden lg:block absolute top-20 left-[60%] w-[calc(100%+2rem)] h-1 bg-gradient-to-r from-emerald-500 to-emerald-300 -z-10" />
               )}
 
-              <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-emerald-500">
+              <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 md:p-8 shadow-md sm:shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 hover:border-orange-500">
                 <div className="flex items-center justify-between mb-3 sm:mb-4">
-                  <div className="text-2xl sm:text-4xl md:text-5xl font-bold text-emerald-500 opacity-20">
+                  <div className="text-2xl sm:text-4xl md:text-5xl font-bold text-orange-500 opacity-20">
                     {step.number}
                   </div>
                   <div className="text-xl sm:text-2xl md:text-4xl">{step.icon}</div>

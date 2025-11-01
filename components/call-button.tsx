@@ -12,9 +12,9 @@ export default function CallButton() {
                 className="relative group"
                 aria-label="Call"
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-ping opacity-75" />
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full animate-ping opacity-75" />
 
-                <div className="relative w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110">
+                <div className="relative w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110">
                     <svg
                         className="w-8 h-8 text-white"
                         fill="none"

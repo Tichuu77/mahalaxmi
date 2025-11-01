@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, CheckCircle, Award, TrendingUp, Users } from "lucide-react"
+import { ArrowRight, Award, TrendingUp, Users } from "lucide-react"
 
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -58,10 +58,10 @@ export default function AboutSection() {
   ]
 
   return (
-    <section id="about" ref={sectionRef} className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-emerald-50/30 to-white relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-12 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-orange-50/30 to-white relative overflow-hidden">
       {/* Animated Background Elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute top-20 right-10 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute bottom-20 left-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -72,18 +72,18 @@ export default function AboutSection() {
             }`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-4 py-2 bg-emerald-100 rounded-full">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <span className="text-emerald-700 font-bold text-xs sm:text-sm uppercase tracking-wider">About Us</span>
+            <div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-4 py-2 bg-orange-100 rounded-full">
+              <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+              <span className="text-orange-700 font-bold text-xs sm:text-sm uppercase tracking-wider">About Us</span>
             </div>
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-4 sm:mb-6 leading-tight">
               Transforming Dreams into{" "}
-              <span className="text-emerald-600 relative inline-block">
+              <span className="text-orange-600 relative inline-block">
                 Reality
                 <svg className="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 100 8" fill="none">
-                  <path d="M0 4C20 2 40 6 60 4C80 2 90 6 100 4" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <path d="M0 4C20 2 40 6 60 4C80 2 90 6 100 4" stroke="#ea580c" strokeWidth="2" fill="none" />
                 </svg>
               </span>
             </h2>
@@ -107,8 +107,8 @@ export default function AboutSection() {
                     }`}
                     style={{ transitionDelay: `${idx * 150}ms` }}
                   >
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-200 transition-colors">
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-colors">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-orange-600" />
                     </div>
                     <span className="text-slate-700 font-semibold text-sm sm:text-base">{feature.text}</span>
                   </div>
@@ -118,20 +118,20 @@ export default function AboutSection() {
 
             {/* Animated Stats */}
             <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
-              <div className="p-4 sm:p-6 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="p-4 sm:p-6 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
                   {countUp.customers.toLocaleString()}+
                 </div>
-                <div className="text-emerald-100 text-xs sm:text-sm mt-1 sm:mt-2 font-semibold">Satisfied Customers</div>
+                <div className="text-orange-100 text-xs sm:text-sm mt-1 sm:mt-2 font-semibold">Satisfied Customers</div>
               </div>
-              <div className="p-4 sm:p-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="p-4 sm:p-6 bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-black text-white">{countUp.happiness}%</div>
-                <div className="text-blue-100 text-xs sm:text-sm mt-1 sm:mt-2 font-semibold">Happy Families</div>
+                <div className="text-orange-100 text-xs sm:text-sm mt-1 sm:mt-2 font-semibold">Happy Families</div>
               </div>
             </div>
 
             {/* CTA Button */}
-            <Button className="bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white gap-2 px-6 sm:px-8 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base font-bold w-full sm:w-auto">
+            <Button className="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white gap-2 px-6 sm:px-8 py-5 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm sm:text-base font-bold w-full sm:w-auto">
               Our Portfolio
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Button>
@@ -157,7 +157,7 @@ export default function AboutSection() {
                     alt="Project showcase"
                     className="w-full h-48 sm:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
 
@@ -174,7 +174,7 @@ export default function AboutSection() {
                     alt="Project detail"
                     className="w-full h-36 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
               <div
@@ -189,7 +189,7 @@ export default function AboutSection() {
                     alt="Community view"
                     className="w-full h-36 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-orange-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </div>
 
@@ -200,7 +200,7 @@ export default function AboutSection() {
                 }`}
                 style={{ transitionDelay: "800ms" }}
               >
-                <div className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white rounded-full shadow-2xl flex items-center gap-2 animate-bounce">
+                <div className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-full shadow-2xl flex items-center gap-2 animate-bounce">
                   <Award className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span className="font-bold text-xs sm:text-sm whitespace-nowrap">67+ Projects Delivered</span>
                 </div>

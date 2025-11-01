@@ -24,21 +24,21 @@ export default function ProjectHighlightsSection() {
       title: "Prime Location",
       description: "Nearest to AIIMS Hospital, Mihan and Samrudhhi Mahamarg",
       icon: MapPin,
-      color: "from-sky-400 to-blue-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 2,
       title: "Ready-to-Construct",
       description: "With Developed Infrastructure",
       icon: Building,
-      color: "from-emerald-400 to-green-600"
+      color: "from-orange-400 to-orange-600"
     },
     {
       id: 3,
       title: "Loan Facility",
       description: "Easy Bank Loan & Spot Registration Assistance",
       icon: Landmark,
-      color: "from-amber-400 to-orange-600"
+      color: "from-orange-400 to-orange-600"
     }
   ]
 
@@ -46,17 +46,17 @@ export default function ProjectHighlightsSection() {
     <section
       id="highlights"
       ref={sectionRef}
-      className="py-6 sm:py-10 md:py-20 px-3 bg-gradient-to-b from-white to-slate-50"
+      className="py-6 sm:py-10 md:py-20 px-3 bg-gradient-to-b from-white to-orange-50"
     >
       <div className="max-w-7xl mx-auto text-center mb-6 sm:mb-10 md:mb-16">
         <div className="inline-flex items-center gap-1.5 mb-2 sm:mb-4">
-          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse" />
-          <span className="text-blue-600 font-semibold text-[10px] sm:text-sm uppercase tracking-wider">
+          <div className="w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse" />
+          <span className="text-orange-600 font-semibold text-[10px] sm:text-sm uppercase tracking-wider">
             Project Highlights
           </span>
         </div>
         <h2 className="text-lg sm:text-3xl md:text-5xl font-bold text-slate-900 mb-2 sm:mb-4">
-          Discover Our <span className="text-blue-600">Highlights</span>
+          Discover Our <span className="text-orange-600">Highlights</span>
         </h2>
         <p className="hidden sm:block text-slate-600 text-xs sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
           Key features that make our project a perfect investment opportunity.
@@ -70,7 +70,7 @@ export default function ProjectHighlightsSection() {
           return (
             <div
               key={item.id}
-              className={`relative group bg-white rounded-lg md:rounded-xl p-2.5 sm:p-4 md:p-8 shadow-md border border-slate-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden ${
+              className={`relative group bg-white rounded-lg md:rounded-xl p-2.5 sm:p-4 md:p-8 shadow-md border border-orange-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
               style={{ transitionDelay: `${index * 0.1}s` }}
@@ -84,7 +84,7 @@ export default function ProjectHighlightsSection() {
                 >
                   <Icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-8 md:h-8 text-white" />
                 </div>
-                <h3 className="text-[10px] sm:text-sm md:text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                <h3 className="text-[10px] sm:text-sm md:text-xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors duration-300 leading-tight">
                   {item.title}
                 </h3>
                 <p className="hidden sm:block text-slate-600 text-xs sm:text-sm leading-relaxed mt-1">

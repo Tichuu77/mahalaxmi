@@ -56,7 +56,7 @@ export default function Header({ isScrolled }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="text-slate-700 hover:text-emerald-600 transition-colors duration-300 font-medium cursor-pointer"
+                className="text-slate-700 hover:text-orange-600 transition-colors duration-300 font-medium cursor-pointer"
               >
                 {item.label}
               </button>
@@ -66,7 +66,7 @@ export default function Header({ isScrolled }: HeaderProps) {
           {/* CTA Button */}
           <div className="hidden md:flex items-center gap-3">
             <a href="tel:+918668569759">
-              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white gap-2 cursor-pointer">
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white gap-2 cursor-pointer">
                 <Phone className="w-4 h-4" />
                 Get in Touch
               </Button>
@@ -89,13 +89,13 @@ export default function Header({ isScrolled }: HeaderProps) {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-emerald-50 rounded-lg transition-colors cursor-pointer"
+                className="block w-full text-left px-4 py-2 text-slate-700 hover:bg-orange-50 rounded-lg transition-colors cursor-pointer"
               >
                 {item.label}
               </button>
             ))}
             <a href="tel:+918766887828" className="block px-4 py-2">
-              <Button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white gap-2 cursor-pointer">
+              <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white gap-2 cursor-pointer">
                 <Phone className="w-4 h-4" />
                 Get in Touch
               </Button>
