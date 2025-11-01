@@ -47,6 +47,40 @@ export default function HeroSection() {
       }
     }
 
+    // Add custom styles for white navigation buttons
+    const style = document.createElement('style')
+    style.textContent = `
+      .hero-swiper .swiper-button-next,
+      .hero-swiper .swiper-button-prev {
+        color: white !important;
+        background: rgba(255, 255, 255, 0.2);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+      }
+      .hero-swiper .swiper-button-next:hover,
+      .hero-swiper .swiper-button-prev:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.1);
+      }
+      .hero-swiper .swiper-button-next::after,
+      .hero-swiper .swiper-button-prev::after {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .hero-swiper .swiper-pagination-bullet {
+        background: white;
+        opacity: 0.5;
+      }
+      .hero-swiper .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #f97316;
+      }
+    `
+    document.head.appendChild(style)
+
     return () => {
       if (document.head.contains(swiperCSS)) {
         document.head.removeChild(swiperCSS)
@@ -54,20 +88,19 @@ export default function HeroSection() {
       if (document.body.contains(swiperScript)) {
         document.body.removeChild(swiperScript)
       }
+      if (document.head.contains(style)) {
+        document.head.removeChild(style)
+      }
     }
   }, [])
 
   const slides = [
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074415_banner_68c9154f2664a.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074800_banner_68c9163022c77.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074800_banner_68c91630250f5.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074821_banner_68c91645d8eeb.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074821_banner_68c91645da8ff.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074821_banner_68c91645dc3b2.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074850_banner_68c9166273485.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074850_banner_68c916627557e.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074850_banner_68c9166276e8f.webp",
-    "https://mahalaxmidevelopers.com/frontend/images/banner_images/2025-09-16_074913_banner_68c916796e52c.webp",
+    "/slider1.webp",
+    "/slider2.webp",
+    "/slider3.webp",
+    "/slider4.webp",
+    "/slider5.webp",
+    "/slider6.webp",
   ]
 
   const handleScrollToSection = (sectionId: string) => {
@@ -95,8 +128,8 @@ export default function HeroSection() {
           </div>
           
           {/* Navigation */}
-          <div className="swiper-button-next text-white"></div>
-          <div className="swiper-button-prev text-white"></div>
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
           
           {/* Pagination */}
           <div className="swiper-pagination"></div>
@@ -107,7 +140,7 @@ export default function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="relative h-full flex flex-col items-center justify-center px-4 text-center z-10">
+      <div className="relative h-full flex flex-col items-center justify-center px-4 text-center z-10 pointer-events-none">
         {/* Main Heading */}
         <div className="space-y-4 mb-8 max-w-4xl">
           <h1
@@ -143,7 +176,7 @@ export default function HeroSection() {
 
         {/* CTA Buttons */}
         <div
-          className={`flex flex-col sm:flex-row gap-4 mb-16 transition-all duration-700 ${
+          className={`flex flex-col sm:flex-row gap-4 mb-16 transition-all duration-700 pointer-events-auto ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionDelay: "300ms" }}
