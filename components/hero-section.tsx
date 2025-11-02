@@ -50,6 +50,9 @@ export default function HeroSection() {
     // Add custom styles for white navigation buttons
     const style = document.createElement('style')
     style.textContent = `
+      .hero-swiper .swiper-slide img {
+        filter: brightness(0.4);
+      }
       .hero-swiper .swiper-button-next,
       .hero-swiper .swiper-button-prev {
         color: white !important;
@@ -135,8 +138,8 @@ export default function HeroSection() {
           <div className="swiper-pagination"></div>
         </div>
         
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 pointer-events-none" />
+        {/* Enhanced Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/75 pointer-events-none" />
       </div>
 
       {/* Content */}
@@ -144,7 +147,7 @@ export default function HeroSection() {
         {/* Main Heading */}
         <div className="space-y-4 mb-8 max-w-4xl">
           <h1
-            className={`text-2xl md:text-4xl font-bold text-orange-500 transition-all duration-700 ${
+            className={`text-2xl md:text-4xl font-bold text-orange-500 transition-all duration-700 drop-shadow-lg ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: "100ms" }}
@@ -155,7 +158,7 @@ export default function HeroSection() {
 
         <div className="space-y-4 mb-8 max-w-4xl">
           <h1
-            className={`text-2xl md:text-4xl font-bold text-white transition-all duration-700 ${
+            className={`text-2xl md:text-4xl font-bold text-white transition-all duration-700 drop-shadow-lg ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ transitionDelay: "200ms" }}
@@ -170,7 +173,7 @@ export default function HeroSection() {
           </h3>
         </div>
 
-        <p className="text-white text-xl md:text-2xl font-extralight mb-3">
+        <p className="text-white text-xl md:text-2xl font-extralight mb-3 drop-shadow-md">
           Location- Besa, Beltarodi, Shankarpur, Wrdha Road, Jamtha, Dongargoan, Mohagoan & Hingna.
         </p>
 
