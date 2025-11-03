@@ -107,7 +107,7 @@ export default function ContactSection() {
             <div className="space-y-3 sm:space-y-4">
               {/* WhatsApp Card */}
               <a
-                href="https://wa.me/+918766887828?text=Enquire for more details"
+                href="https://wa.me/+918766887828?text=Enquiry for more details"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block p-4 sm:p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl sm:rounded-2xl border-2 border-orange-200 hover:border-orange-400 hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 group"
