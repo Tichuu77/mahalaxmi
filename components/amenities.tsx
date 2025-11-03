@@ -184,9 +184,9 @@ export default function AmenitiesSection() {
                   </div>
                   
                   {/* Floating Number Badge - Smaller on mobile */}
-                  <div className={`absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-gradient-to-br ${amenity.color} rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] md:text-xs shadow-lg transform transition-all duration-500 ${isHovered ? 'scale-110 rotate-12' : 'scale-100'}`}>
+                  {/* <div className={`absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 bg-gradient-to-br ${amenity.color} rounded-full flex items-center justify-center text-white font-bold text-[9px] sm:text-[10px] md:text-xs shadow-lg transform transition-all duration-500 ${isHovered ? 'scale-110 rotate-12' : 'scale-100'}`}>
                     {String(amenity.id).padStart(2, '0')}
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Content - More Compact on Mobile */}

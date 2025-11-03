@@ -169,7 +169,7 @@ export default function HeroSection() {
 
         <div className="py-1 px-4 md:px-6 bg-orange-500 mb-3">
           <h3 className="text-xs md:text-lg text-white font-light">
-            NMRDA SANCTIONS RL REAL APPROVAL PROJECTS
+            NMRDA SANCTION RL RERA APPROVED PROJECTS
           </h3>
         </div>
 
@@ -200,7 +200,7 @@ export default function HeroSection() {
 
         <div className="bg-orange-500 py-3 px-6 rounded">
           <h3 className="text-white text-sm md:text-base">
-            Best For Investment @ 18 lakh only on Wardha Road
+            Best For Investment @ 22 lakh only on Wardha Road
           </h3>
         </div>
       </div>

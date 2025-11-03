@@ -27,7 +27,7 @@ export default function OurProjects() {
         id: 2,
         title: "Mahalaxmi Nagar-31",
         image: "/ongoingProject8.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 31. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        description : `Located at Besa-Pipla, Mahalaxmi Nagar – 31 offers premium plots in Nagpur Besa, perfectly suited for residential and commercial development. These NMRDA sanctioned plots with RL come with modern amenities, excellent connectivity, and easy bank loan options—making them an ideal choice for your dream home.`,
         location: `MOUZA -   PIPLA`
       },
         {
@@ -41,28 +41,29 @@ export default function OurProjects() {
         id: 4,
         title: "Mahalaxmi Nagar-41",
         image: "/ongoingProject3.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 41. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        description : `Located near Samrudhi Mahamarg on Mihan Road, Mahalaxmi Nagar – 41 offers premium NIT/NMRDA sanctioned plots with RL. Ideal for residential and commercial use, these plots come with modern amenities and easy bank financing. A prime location in Nagpur for smart investment.`,
         location: `MOUZA -  GOMGAON`
       },
       {
         id: 5,
         title: "Mahalaxmi Nagar - 42",
         image: "/ongoingProject2.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 42. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        description : `Mahalaxmi Nagar – 42, near Jamtha on Wardha Road, offers well-connected plots perfect for homes or businesses. Approved by NMRDA and equipped with RL, this project comes with excellent amenities and easy bank finance options.
+Best for investment to buy plots in Nagpur.`,
         location: `MOUZA -  JAMTHA`
       },
        {
         id: 6,
         title: "Mahalaxmi Nagar - 43",
         image: "/ongoingProject10.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 43. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        description : `Set in the promising location of Shankarpur, Mahalaxmi Nagar – 43 provides fully sanctioned plots With NIT and NMRDA approval with bank financing. Buy plots in Nagpur and grab the best deals.`,
         location: `MOUZA -  SHANKARPUR`
       },
        {
         id: 7,
         title: "Mahalaxmi Nagar - 45",
         image: "/ongoingProject11.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 45. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        description : `Mahalaxmi Nagar – 45, located in the prime area of MIHAN, Nagpur, offers premium residential and commercial plots in one of the fastest-growing hubs of Central India. With unmatched connectivity to the airport, IT parks, and major highways, this project is ideal for both living and investment. Approved by NMRDA and equipped with RL, it comes with excellent amenities and hassle-free bank finance options.`,
         location: `MOUZA -  SHANKARPUR`
       },
        {
@@ -108,7 +109,7 @@ export default function OurProjects() {
   ]
 
   const handleInquiry = (projectTitle: string) => {
-    const message = encodeURIComponent(`Hi, I'm interested in ${projectTitle}. Please provide more details.`)
+    const message = encodeURIComponent(`Inquire for  for more details `)
     window.open(`https://wa.me/+918766887828?text=${message}`, "_blank")
   }
 
