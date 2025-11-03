@@ -8,7 +8,7 @@ export default function WhatsappButton() {
   return (
     <div className="fixed bottom-8 right-8 z-40">
       <a
-        href="https://wa.me/+918766887828?text=Inquire for more details"
+        href="https://wa.me/+918766887828?text=Enquire for more details"
         target="_blank"
         rel="noopener noreferrer"
         className="relative group"

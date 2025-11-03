@@ -109,7 +109,7 @@ Best for investment to buy plots in Nagpur.`,
   ]
 
   const handleInquiry = (projectTitle: string) => {
-    const message = encodeURIComponent(`Inquire for  for more details `)
+    const message = encodeURIComponent(`Enquire for  for more details `)
     window.open(`https://wa.me/+918766887828?text=${message}`, "_blank")
   }
 
