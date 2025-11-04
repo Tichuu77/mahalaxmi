@@ -71,7 +71,7 @@ Best for investment to buy plots in Nagpur.`,
         title: "Mahalaxmi Nagar - 47",
         image: "/ongoingProject12.jpg",
          description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 47. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
-        location: `MOUZA - NANDA, KORADI ROAD`
+        location: `MOUZA - KORADI ROAD HALDIRAM & AM CINEMA BACKSIDE `
       },
     ],
     completed: [
@@ -109,7 +109,7 @@ Best for investment to buy plots in Nagpur.`,
   ]
 
   const handleInquiry = (projectTitle: string) => {
-    const message = encodeURIComponent(`Enquiry for more details`)
+    const message = encodeURIComponent(`Hi, I'm interested in ${projectTitle}. Please provide more details.`)
     window.open(`https://wa.me/+918766887828?text=${message}`, "_blank")
   }
 

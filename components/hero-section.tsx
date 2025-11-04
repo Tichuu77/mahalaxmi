@@ -174,7 +174,7 @@ export default function HeroSection() {
         </div>
 
         <p className="text-white text-xl md:text-2xl font-extralight mb-3 drop-shadow-md">
-          Location- Besa, Beltarodi, Shankarpur, Wrdha Road, Jamtha, Dongargoan, Mohagoan & Hingna.
+          Location- Besa, Beltarodi, Shankarpur, Wrdha Road, Jamtha, katol road, umred road, koradi road & samruddhi circle.
         </p>
 
         {/* CTA Buttons */}
@@ -200,7 +200,7 @@ export default function HeroSection() {
 
         <div className="bg-orange-500 py-3 px-6 rounded">
           <h3 className="text-white text-sm md:text-base">
-            Best For Investment @ 22 lakh only on Wardha Road
+            Best For Investment @ 22 lakh only on samruddhi circle Nagpur.
           </h3>
         </div>
       </div>
