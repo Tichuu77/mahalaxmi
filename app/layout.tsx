@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: 'Mahalaxmi Developers - Real Estate in Nagpur',
   description: 'Premium Residential and Commercial Real Estate Solutions in Nagpur by Mahalaxmi Developers. Explore Our Projects Today!',
   generator: 'Next.js',
-  icons: '/mahalaxmi-logo.png',
+  icons: '/Mahalaxmi Infra new Logo.png',
   keywords: ['Real Estate', 'Nagpur', 'Mahalaxmi Developers', 'Residential Projects', 'Commercial Projects', 'Property Development'],
   authors: [{ name: 'Mahalaxmi Developers', url: 'https://mahalaxmidevelopers.in' }],
   openGraph: {

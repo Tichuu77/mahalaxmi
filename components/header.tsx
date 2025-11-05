@@ -42,7 +42,7 @@ export default function Header({ isScrolled }: HeaderProps) {
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <Image
-              src="/mahalaxmi-logo.png"
+              src="/Mahalaxmi Infra new Logo.png"
               alt="Mahalaxmi Group Logo"
               width={100}
               height={100}

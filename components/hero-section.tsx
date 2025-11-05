@@ -174,7 +174,7 @@ export default function HeroSection() {
         </div>
 
         <p className="text-white text-xl md:text-2xl font-extralight mb-3 drop-shadow-md">
-          Location- Besa, Beltarodi, Shankarpur, Wrdha Road, Jamtha, katol road, umred road, koradi road & samruddhi circle.
+          Location- Besa, Beltarodi, Shankarpur, Wardha Road, Jamtha, katol road, Umred road, Koradi road & Samruddhi circle Nagpur.
         </p>
 
         {/* CTA Buttons */}
