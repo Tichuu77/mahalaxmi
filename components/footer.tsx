@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4 cursor-pointer hover:opacity-80 transition-opacity">
               <div className="w-16 h-10 sm:w-20 sm:h-12  rounded-lg flex items-center justify-center shadow-lg">
-                <img src="/mahalaxmi-logo.png" alt="Logo" className="w-14 h-9 sm:w-18 sm:h-12 object-contain" />
+                <img src="/Mahalaxmi Infra new Logo.png" alt="Logo" className="w-14 h-9 sm:w-18 sm:h-12 object-contain" />
               </div>
               <span className="font-bold text-base sm:text-lg text-white">Mahalaxmi Group</span>
             </div>

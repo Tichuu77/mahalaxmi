@@ -27,21 +27,22 @@ export default function OurProjects() {
         id: 2,
         title: "Mahalaxmi Nagar-31",
         image: "/ongoingProject8.webp",
-        description : `Located at Besa-Pipla, Mahalaxmi Nagar – 31 offers premium plots in Nagpur Besa, perfectly suited for residential and commercial development. These NMRDA sanctioned plots with RL come with modern amenities, excellent connectivity, and easy bank loan options—making them an ideal choice for your dream home.`,
+        description : `This Project Ready to Move and Fully Residential Layout Are Located Besa-Pipla Road Opposite Zudio, Croma on Prime Location and upto 90% Bank Finance Available.`,
         location: `MOUZA -   PIPLA`
       },
         {
         id: 3,
         title: "Mahalaxmi Nagar-39",
         image: "/ongoingProject5.webp",
-        description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 39. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+        description : `Katol Road Mahalaxmi Developers Launched Project Mahalaxmi Nagar-39 This Project Located Fetri (Chicholi) New Outer Ring Road Touch Layout.`,
         location: `MOUZA -   CHICHOLI`
       },
       {
         id: 4,
         title: "Mahalaxmi Nagar-41",
         image: "/ongoingProject3.webp",
-        description : `Located near Samrudhi Mahamarg on Mihan Road, Mahalaxmi Nagar – 41 offers premium NIT/NMRDA sanctioned plots with RL. Ideal for residential and commercial use, these plots come with modern amenities and easy bank financing. A prime location in Nagpur for smart investment.`,
+        description : `Located Near Samruddhi Mahamarg on South Nagpur Premium Layout Mahalaxmi Nagar-41 This Premium Luxury Club House & Swimming Pool NMRDA & RL  Project Aminities and Easy Bank Finance Available upto 90% 
+A Prime Location in Nagpur for Smart Investment .`,
         location: `MOUZA -  GOMGAON`
       },
       {
@@ -56,21 +57,24 @@ Best for investment to buy plots in Nagpur.`,
         id: 6,
         title: "Mahalaxmi Nagar - 43",
         image: "/ongoingProject10.webp",
-        description : `Set in the promising location of Shankarpur, Mahalaxmi Nagar – 43 provides fully sanctioned plots With NIT and NMRDA approval with bank financing. Buy plots in Nagpur and grab the best deals.`,
+        description : `Ready to Move Project by Mahalaxmi Nagar-43 offering Residential Plot With Aminities Behind Royal Gondwana School & Singapure City Shankarpur, Nagpur 
+An Affordable Price & Fully Developed NMRDA & RL upto 90% Bank Finance Available .`,
         location: `MOUZA -  SHANKARPUR`
       },
        {
         id: 7,
         title: "Mahalaxmi Nagar - 45",
         image: "/ongoingProject11.webp",
-        description : `Mahalaxmi Nagar – 45, located in the prime area of MIHAN, Nagpur, offers premium residential and commercial plots in one of the fastest-growing hubs of Central India. With unmatched connectivity to the airport, IT parks, and major highways, this project is ideal for both living and investment. Approved by NMRDA and equipped with RL, it comes with excellent amenities and hassle-free bank finance options.`,
+        description : `Mahalaxmi Nagar-45 is a Premium Residential Plotted Development Project Located South Nagpur Near Samruddhi Mahamarg
+Location - The Project is Situated in Mouza - Sumthana Behind Godrej Properties Close to D- Mart  Connectivity - The Location Offers Excellent Connectivity to Major City Hubs, Including Nagpur Airport, AIIMS, IIM, TCS, INFOSYS,TECH MAHINDRA, Patanjali as soon as Mihan.`,
         location: `MOUZA -  SHANKARPUR`
       },
        {
         id: 11,
         title: "Mahalaxmi Nagar - 47",
         image: "/ongoingProject12.jpg",
-         description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 47. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
+         description: `Mahalaxmi Developers New Project Launch In Koradi Road,(Nanda) This Project Located are Behind Haldiram,AM Cinema,Rokde Jwellers & Naivedyam Hotel
+This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Finance Available.`,
         location: `MOUZA - KORADI ROAD HALDIRAM & AM CINEMA BACKSIDE `
       },
     ],
