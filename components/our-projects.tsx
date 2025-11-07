@@ -34,7 +34,7 @@ export default function OurProjects() {
         id: 3,
         title: "Mahalaxmi Nagar-39",
         image: "/ongoingProject5.webp",
-        description : `Katol Road Mahalaxmi Developers Launched Project Mahalaxmi Nagar-39 This Project Located Fetri (Chicholi) New Outer Ring Road Touch Layout.`,
+        description : `Katol Road Mahalaxmi Developers Launched Project Mahalaxmi Nagar-39 This Project Located Fetri (Chicholi) New Outer Ring Road Touch Layout.`,
         location: `MOUZA -   CHICHOLI`
       },
       {
@@ -65,9 +65,8 @@ An Affordable Price & Fully Developed NMRDA & RL upto 90% Bank Finance Available
         id: 7,
         title: "Mahalaxmi Nagar - 45",
         image: "/ongoingProject11.webp",
-        description : `Mahalaxmi Nagar-45 is a Premium Residential Plotted Development Project Located South Nagpur Near Samruddhi Mahamarg
-Location - The Project is Situated in Mouza - Sumthana Behind Godrej Properties Close to D- Mart  Connectivity - The Location Offers Excellent Connectivity to Major City Hubs, Including Nagpur Airport, AIIMS, IIM, TCS, INFOSYS,TECH MAHINDRA, Patanjali as soon as Mihan.`,
-        location: `MOUZA -  SHANKARPUR`
+        description : `Mahalaxmi Nagar-45 is a Premium Residential Plotted Development Project Located South Nagpur Near Samruddhi Mahamarg|||Location - The Project is Situated in Mouza - Sumthana Behind Godrej Properties Close to D- Mart|||{Connectivity - The Location Offers Excellent Connectivity to Major City Hubs, Including Nagpur Airport, AIIMS, IIM, TCS, INFOSYS, TECH MAHINDRA, Patanjali as well as Mihan.}`,
+        location: `MOUZA -  SUMTHANA`
       },
        {
         id: 11,
@@ -75,7 +74,7 @@ Location - The Project is Situated in Mouza - Sumthana Behind Godrej Properties 
         image: "/ongoingProject12.jpg",
          description: `Mahalaxmi Developers New Project Launch In Koradi Road,(Nanda) This Project Located are Behind Haldiram,AM Cinema,Rokde Jwellers & Naivedyam Hotel
 This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Finance Available.`,
-        location: `MOUZA - KORADI ROAD HALDIRAM & AM CINEMA BACKSIDE `
+        location: `MOUZA - KORADI ROAD HALDIRAM & AM CINEMA BACKSIDE `
       },
     ],
     completed: [
@@ -103,7 +102,29 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
       },
     ],
    
-    upcoming: []
+    upcoming: [
+      {
+        id: 15,
+        title: "Mahalaxmi Nagar - 48",
+        image: "/plotDef.avif",
+        description : ``,
+        location: ``
+      },
+      {
+        id: 16,
+        title: "Mahalaxmi Nagar - 49",
+        image: "/plotDef.avif",
+        description : ``,
+        location: ``
+      },
+      {
+        id: 17,
+        title: "Mahalaxmi Nagar - 50",
+        image: "/plotDef.avif",
+        description : ``,
+        location: ``
+      },
+    ]
   }
 
   const tabs = [
@@ -115,6 +136,27 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
   const handleInquiry = (projectTitle: string) => {
     const message = encodeURIComponent(`Hi, I'm interested in ${projectTitle}. Please provide more details.`)
     window.open(`https://wa.me/+918766887828?text=${message}`, "_blank")
+  }
+
+  const renderDescription = (description: string) => {
+    // Check if description contains the ||| separator
+    if (description.includes('|||')) {
+      const paragraphs = description.split('|||')
+      return (
+        <div className="mt-3 text-slate-600 text-xs sm:text-sm leading-relaxed px-2 space-y-3">
+          {paragraphs.map((para, idx) => (
+            <p key={idx}>{para.trim()}</p>
+          ))}
+        </div>
+      )
+    }
+    
+    // Default single paragraph
+    return (
+      <p className="mt-3 text-slate-600 text-xs sm:text-sm leading-relaxed px-2">
+        {description}
+      </p>
+    )
   }
 
   return (
@@ -192,9 +234,7 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
                     <span className="flex-1">Project Details</span>
                     <ChevronRight className="ml-2 w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-open/details:rotate-90 text-orange-600" />
                   </summary>
-                  <p className="mt-3 text-slate-600 text-xs sm:text-sm leading-relaxed px-2">
-                    {project.description}
-                  </p>
+                  {renderDescription(project.description)}
                 </details>
 
                 <div className="mb-4 sm:mb-6 flex items-start gap-2 p-2.5 sm:p-3 bg-orange-50 rounded-lg border border-orange-100">
