@@ -19,8 +19,8 @@ export default function Footer() {
           {/* Column 1 - Logo & Description */}
           <div>
             <div className="flex items-center gap-2 mb-4 cursor-pointer hover:opacity-80 transition-opacity">
-              <div className="w-16 h-10 sm:w-20 sm:h-12  rounded-lg flex items-center justify-center shadow-lg">
-                <img src="/Mahalaxmi Infra new Logo.png" alt="Logo" className="w-14 h-9 sm:w-18 sm:h-12 object-contain" />
+              <div className="w-26 h-26 sm:w-20 sm:h-12  rounded-lg flex items-center justify-center shadow-lg">
+                <img src="/Malaxmi-Final-Logo.-2png.png" alt="Logo" className="w-26 h-26 sm:w-18 sm:h-12 object-contain" />
               </div>
               <span className="font-bold text-base sm:text-lg text-white">Mahalaxmi Group</span>
             </div>
@@ -56,6 +56,9 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4 text-base sm:text-lg">Contact Info</h3>
             <div className="space-y-3 sm:space-y-4">
+              <div className="flex items-center gap-3 group">
+                Girish Patankar
+              </div>
               <div className="flex items-start gap-3 group">
                 <div className="w-8 h-8 sm:w-9 sm:h-9 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500 transition-colors flex-shrink-0">
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 group-hover:text-white transition-colors" />
@@ -119,6 +122,22 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {/* TraceMyIP Counter */}
+      <div
+        id="elemID031021"
+        style={{ lineHeight: "16px", textAlign: "center", zIndex: 100000 }}
+        dangerouslySetInnerHTML={{
+          __html: `
+      <noscript>
+        <a href="https://www.tracemyip.org/GDPR-compliant-website-tracking-software.htm">
+          <img src="//s2.tracemyip.org/vLg/1206/4684NR-IPIB/103683/2/12/ans/" alt="" style="border:0;" />
+        </a>
+      </noscript>
+    `,
+        }}
+      />
+
+
     </footer>
   )
 }
