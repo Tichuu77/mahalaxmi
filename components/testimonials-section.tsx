@@ -14,7 +14,7 @@ export default function TestimonialsSection() {
         "Investing in a by Maha Laxmi Developers transparent process made effortless experience. The best decision I ever made. The local transparent process made it an effortless experience.",
       name: "Rajkumar Gharjale",
       location: "Nagpur",
-      image: "https://pk.mahalaxmidevelopers.com/wp-content/uploads/2025/06/1-9.png",
+      image: "/testonomials1.webp",
       rating: 5,
     },
     {
@@ -23,7 +23,7 @@ export default function TestimonialsSection() {
         "I wanted to invest in a growing area, and plots in Nagpur Besa seemed perfect. Maha Laxmi Developers exceeded my expectations. Highly recommended!",
       name: "Priya Shah",
       location: "Mumbai",
-      image: "https://pk.mahalaxmidevelopers.com/wp-content/uploads/2025/06/3-4.png",
+      image: "/testonomials2.jpg",
       rating: 5,
     },
     {
@@ -32,7 +32,7 @@ export default function TestimonialsSection() {
         "Investing in residential plots with Mahalaxmi Developers was one of my best decisions. Their transparency, clear titles, and prompt assistance gave me peace of mind.",
       name: "Karan Akojwar",
       location: "Pune",
-      image: "https://pk.mahalaxmidevelopers.com/wp-content/uploads/2025/06/4-2.png",
+      image: "/testonomials3.jpg",
       rating: 5,
     },
   ]

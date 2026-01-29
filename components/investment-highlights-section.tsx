@@ -4,7 +4,7 @@ export default function InvestmentHighlightsSection() {
   const highlights = [
     { stat: "10+ Million", label: "Sq. Ft. Developed", icon: "📐" },
     { stat: "8× More", label: "Value Appreciation", icon: "📈" },
-    { stat: "1+ Million", label: "Happy Customers", icon: "😊" },
+    { stat: "17,000", label: "Happy Customers", icon: "😊" },
   ]
 
   return (

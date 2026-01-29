@@ -69,7 +69,7 @@ export default function ContactSection() {
   const trustIndicators = [
     { icon: Clock, label: "24hrs Response" },
     { icon: Shield, label: "100% Secure" },
-    { icon: Users, label: "15K+ Clients" },
+    { icon: Users, label: "17K+ Clients" },
   ]
 
   return (

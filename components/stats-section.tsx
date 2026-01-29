@@ -27,7 +27,7 @@ export default function StatsSection() {
   const stats = [
     {
       icon: Users,
-      number: "15,000+",
+      number: "17,000+",
       label: "Satisfied Customers",
       color: "from-orange-500 to-orange-600",
     },

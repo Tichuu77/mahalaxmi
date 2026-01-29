@@ -31,7 +31,7 @@ export default function AboutSection() {
   const animateCounters = () => {
     const duration = 2000
     const steps = 60
-    const customerTarget = 15000
+    const customerTarget = 17000
     const happinessTarget = 95
 
     let currentStep = 0
@@ -52,7 +52,7 @@ export default function AboutSection() {
   }
 
   const features = [
-    { icon: Award, text: "20+ Years of Excellence" },
+    { icon: Award, text: "13+ Years of Excellence" },
     { icon: TrendingUp, text: "880 Acres Developed" },
     { icon: Users, text: "Expert Team of 50+" },
   ]
