@@ -33,7 +33,7 @@ export default function StatsSection() {
     },
     {
       icon: Building2,
-      number: "67",
+      number: "70",
       label: "Projects Complete",
       color: "from-orange-500 to-orange-600",
     },

@@ -202,7 +202,7 @@ export default function AboutSection() {
               >
                 <div className="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white rounded-full shadow-2xl flex items-center gap-2 animate-bounce">
                   <Award className="w-4 h-4 sm:w-5 sm:h-5" />
-                  <span className="font-bold text-xs sm:text-sm whitespace-nowrap">67+ Projects Delivered</span>
+                  <span className="font-bold text-xs sm:text-sm whitespace-nowrap">70+ Projects Delivered</span>
                 </div>
               </div>
             </div>
