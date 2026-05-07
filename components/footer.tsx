@@ -1,6 +1,6 @@
 "use client"
 
-import { Building2, Mail, Phone, MapPin, Facebook, Instagram, Linkedin } from "lucide-react"
+import { Building2, Mail, Phone, MapPin } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -42,9 +42,11 @@ export default function Footer() {
                 <li key={link.id}>
                   <button
                     onClick={() => handleNavClick(link.id)}
-                    className="hover:text-orange-400 transition-colors duration-300 cursor-pointer text-sm sm:text-base group flex items-center gap-2"
+                    className="transition-colors duration-300 cursor-pointer text-sm sm:text-base group flex items-center gap-2 text-slate-300"
+                    onMouseEnter={e => (e.currentTarget.style.color = '#C9862B')}
+                    onMouseLeave={e => (e.currentTarget.style.color = '')}
                   >
-                    <span className="w-0 h-0.5 bg-orange-400 group-hover:w-4 transition-all duration-300"></span>
+                    <span className="w-0 h-0.5 group-hover:w-4 transition-all duration-300" style={{ backgroundColor: '#C9862B' }}></span>
                     {link.label}
                   </button>
                 </li>
@@ -56,31 +58,48 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4 text-base sm:text-lg">Contact Info</h3>
             <div className="space-y-3 sm:space-y-4">
-              <div className="flex items-center gap-3 group">
-                Girish Patankar
+              <div className=" group">
+                <h4>Girish Patankar</h4>
+                <h4>Sales manager</h4>
               </div>
               <div className="flex items-start gap-3 group">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500 transition-colors flex-shrink-0">
-                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 group-hover:text-white transition-colors" />
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center transition-colors flex-shrink-0" style={{ backgroundColor: '#30534A30' }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#30534A')}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#30534A30')}
+                >
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 transition-colors" style={{ color: '#C9862B' }} />
                 </div>
                 <a
                   href="mailto:girishpatankar7@gmail.com"
-                  className="hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base break-all"
+                  className="transition-colors cursor-pointer text-sm sm:text-base break-all text-slate-300"
+                  onMouseEnter={e => (e.currentTarget.style.color = '#C9862B')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '')}
                 >
                   girishpatankar7@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3 group">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500 transition-colors flex-shrink-0">
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 group-hover:text-white transition-colors" />
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center transition-colors flex-shrink-0" style={{ backgroundColor: '#30534A30' }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#30534A')}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#30534A30')}
+                >
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#C9862B' }} />
                 </div>
-                <a href="tel:+918766887828" className="hover:text-orange-400 transition-colors cursor-pointer text-sm sm:text-base">
+                <a
+                  href="tel:+918766887828"
+                  className="transition-colors cursor-pointer text-sm sm:text-base text-slate-300"
+                  onMouseEnter={e => (e.currentTarget.style.color = '#C9862B')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '')}
+                >
                   +91 8766887828
                 </a>
               </div>
               <div className="flex items-start gap-3 group">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500 transition-colors flex-shrink-0">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-orange-400 group-hover:text-white transition-colors" />
+                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex items-center justify-center transition-colors flex-shrink-0" style={{ backgroundColor: '#30534A30' }}
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#30534A')}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#30534A30')}
+                >
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#C9862B' }} />
                 </div>
                 <span className="text-sm sm:text-base">Nagpur, Maharashtra</span>
               </div>
@@ -106,7 +125,9 @@ export default function Footer() {
                   key={idx}
                   href={obj.link}
                   aria-label={obj.label}
-                  className="w-9 h-9 sm:w-10 sm:h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-orange-600 transition-all duration-300 cursor-pointer hover:scale-110 shadow-md hover:shadow-lg"
+                  className="w-9 h-9 sm:w-10 sm:h-10 bg-slate-800 rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer hover:scale-110 shadow-md hover:shadow-lg"
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#30534A')}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = '')}
                 >
                   <obj.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
@@ -117,7 +138,7 @@ export default function Footer() {
           {/* Additional Bottom Text */}
           <div className="mt-6 pt-6 border-t border-slate-800 text-center">
             <p className="text-slate-500 text-xs sm:text-sm">
-              Crafted with <span className="text-orange-500">♥</span> for your dream home
+              Crafted with <span style={{ color: '#C9862B' }}>♥</span> for your dream home
             </p>
           </div>
         </div>

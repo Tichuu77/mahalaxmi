@@ -54,7 +54,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-xl sm:text-3xl md:text-5xl font-bold text-white mb-2 sm:mb-4">
-            Why Choose <span className="text-orange-400">Us</span>
+            Why Choose <span style={{ color: '#C9862B' }}>Us</span>
           </h2>
           <p className="hidden sm:block text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
             Comprehensive services designed to make your real estate journey
@@ -62,22 +62,27 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* ✅ Split grid: 2 columns on mobile, 2 on tablet, 4 on desktop */}
+        {/* Split grid: 2 columns on mobile, 2 on tablet, 4 on desktop */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
           {services.map((service, idx) => {
             const Icon = service.icon
             return (
               <div
                 key={idx}
-                className={`p-4 sm:p-5 md:p-8 bg-slate-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl border border-slate-700 hover:border-orange-500 hover:bg-slate-800 transition-all duration-300 ${
+                className={`p-4 sm:p-5 md:p-8 bg-slate-800/50 backdrop-blur-sm rounded-xl md:rounded-2xl border border-slate-700 hover:bg-slate-800 transition-all duration-300 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-6"
                 }`}
                 style={{ transitionDelay: `${idx * 80}ms` }}
+                onMouseEnter={e => (e.currentTarget.style.borderColor = '#30534A')}
+                onMouseLeave={e => (e.currentTarget.style.borderColor = '')}
               >
                 {/* Icon */}
-                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                <div
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg flex items-center justify-center mb-3 sm:mb-4"
+                  style={{ background: 'linear-gradient(135deg, #30534A, #3d6b60)' }}
+                >
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                 </div>
 

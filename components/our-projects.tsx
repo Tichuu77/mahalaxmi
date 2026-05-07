@@ -64,14 +64,14 @@ An Affordable Price & Fully Developed NMRDA & RL upto 90% Bank Finance Available
        {
         id: 7,
         title: "Mahalaxmi Nagar - 45",
-        image: "/ongoingProject11.webp",
+        image: "/project_M-45.jpg",
         description : `Mahalaxmi Nagar-45 is a Premium Residential Plotted Development Project Located South Nagpur Near Samruddhi Mahamarg|||Location - The Project is Situated in Mouza - Sumthana Behind Godrej Properties Close to D- Mart|||{Connectivity - The Location Offers Excellent Connectivity to Major City Hubs, Including Nagpur Airport, AIIMS, IIM, TCS, INFOSYS, TECH MAHINDRA, Patanjali as well as Mihan.}`,
         location: `MOUZA -  SUMTHANA`
       },
        {
         id: 11,
         title: "Mahalaxmi Nagar - 47",
-        image: "/ongoingProject12.jpg",
+        image: "/project_M-47.jpg",
          description: `Mahalaxmi Developers New Project Launch In Koradi Road,(Nanda) This Project Located are Behind Haldiram,AM Cinema,Rokde Jwellers & Naivedyam Hotel
 This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Finance Available.`,
         location: `MOUZA - KORADI ROAD HALDIRAM & AM CINEMA BACKSIDE `
@@ -119,7 +119,7 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
       },
       {
         id: 17,
-        title: "Mahalaxmi Nagar - 50",
+        title: "Mahalaxmi Nagar - 50",
         image: "/plotDef.avif",
         description : ``,
         location: ``
@@ -160,20 +160,20 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
   }
 
   return (
-    <section id="our-projects" ref={sectionRef} className="py-10 sm:py-16 px-3 sm:px-6 bg-gradient-to-b from-white via-orange-50/20 to-white relative overflow-hidden">
+    <section id="our-projects" ref={sectionRef} className="py-10 sm:py-16 px-3 sm:px-6 bg-gradient-to-b from-white via-[#30534A]/5 to-white relative overflow-hidden">
       {/* Background Decoration */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute top-20 left-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ backgroundColor: '#30534A' }} />
+      <div className="absolute bottom-20 right-10 w-72 h-72 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ backgroundColor: '#C9862B' }} />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 px-3 py-1.5 bg-orange-100 rounded-full">
-            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-            <span className="text-orange-700 font-bold text-xs sm:text-sm uppercase tracking-wider">Portfolio</span>
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 px-3 py-1.5 rounded-full" style={{ backgroundColor: '#30534A15' }}>
+            <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#30534A' }} />
+            <span className="font-bold text-xs sm:text-sm uppercase tracking-wider" style={{ color: '#30534A' }}>Portfolio</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-2 sm:mb-3">
-            Our <span className="text-orange-600">Projects</span>
+            Our <span style={{ color: '#30534A' }}>Projects</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Discover our exceptional residential developments across Nagpur
@@ -188,9 +188,28 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
               onClick={() => setActiveTab(tab.id)}
               className={`px-4 py-2 sm:px-6 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-300 cursor-pointer ${
                 activeTab === tab.id
-                  ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg scale-105"
-                  : "bg-white text-slate-600 hover:bg-orange-50 hover:text-orange-600 border-2 border-slate-200 hover:border-orange-300"
+                  ? "text-white shadow-lg scale-105"
+                  : "bg-white text-slate-600 border-2 border-slate-200"
               }`}
+              style={
+                activeTab === tab.id
+                  ? { background: 'linear-gradient(135deg, #30534A, #3d6b60)' }
+                  : undefined
+              }
+              onMouseEnter={e => {
+                if (activeTab !== tab.id) {
+                  e.currentTarget.style.backgroundColor = '#30534A10'
+                  e.currentTarget.style.color = '#30534A'
+                  e.currentTarget.style.borderColor = '#30534A50'
+                }
+              }}
+              onMouseLeave={e => {
+                if (activeTab !== tab.id) {
+                  e.currentTarget.style.backgroundColor = ''
+                  e.currentTarget.style.color = ''
+                  e.currentTarget.style.borderColor = ''
+                }
+              }}
             >
               {tab.label}
             </button>
@@ -203,10 +222,12 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
             <div
               key={project.id}
               ref={(el) => { projectRefs.current[index] = el }}
-              className={`group bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 border-2 border-transparent hover:border-orange-300 ${
+              className={`group bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 sm:hover:-translate-y-2 border-2 border-transparent ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 0.1}s` }}
+              onMouseEnter={e => (e.currentTarget.style.borderColor = '#30534A50')}
+              onMouseLeave={e => (e.currentTarget.style.borderColor = 'transparent')}
             >
               <div className="relative h-40 sm:h-56 md:h-64 overflow-hidden bg-slate-200">
                 <img
@@ -215,7 +236,7 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-3 right-3 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg">
+                <div className="absolute top-3 right-3 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold text-white shadow-lg" style={{ background: 'linear-gradient(135deg, #30534A, #3d6b60)' }}>
                   {activeTab === "completed"
                     ? "Completed"
                     : activeTab === "ongoing"
@@ -225,26 +246,40 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
               </div>
 
               <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-orange-600 transition-colors">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-slate-900 mb-3 sm:mb-4 transition-colors group-hover:text-[#30534A]">
                   {project.title}
                 </h3>
 
                 <details className="mb-4 sm:mb-6 group/details">
-                  <summary className="cursor-pointer font-medium text-slate-800 py-2 list-none border-2 border-orange-200 flex items-center bg-orange-50 px-3 sm:px-4 rounded-lg hover:bg-orange-100 hover:border-orange-300 transition-colors duration-300 text-sm sm:text-base">
+                  <summary
+                    className="cursor-pointer font-medium text-slate-800 py-2 list-none border-2 flex items-center px-3 sm:px-4 rounded-lg transition-colors duration-300 text-sm sm:text-base"
+                    style={{ borderColor: '#30534A30', backgroundColor: '#30534A08' }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.backgroundColor = '#30534A15'
+                      e.currentTarget.style.borderColor = '#30534A50'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.backgroundColor = '#30534A08'
+                      e.currentTarget.style.borderColor = '#30534A30'
+                    }}
+                  >
                     <span className="flex-1">Project Details</span>
-                    <ChevronRight className="ml-2 w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-open/details:rotate-90 text-orange-600" />
+                    <ChevronRight className="ml-2 w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-open/details:rotate-90" style={{ color: '#30534A' }} />
                   </summary>
                   {renderDescription(project.description)}
                 </details>
 
-                <div className="mb-4 sm:mb-6 flex items-start gap-2 p-2.5 sm:p-3 bg-orange-50 rounded-lg border border-orange-100">
-                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                <div className="mb-4 sm:mb-6 flex items-start gap-2 p-2.5 sm:p-3 rounded-lg border" style={{ backgroundColor: '#30534A08', borderColor: '#30534A20' }}>
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5" style={{ color: '#30534A' }} />
                   <span className="text-slate-700 text-xs sm:text-sm font-medium">{project.location}</span>
                 </div>
 
                 <Button
                   onClick={() => handleInquiry(project.title)}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base font-semibold shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+                  className="w-full text-white py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 text-sm sm:text-base font-semibold shadow-md hover:shadow-lg transition-all hover:scale-[1.02]"
+                  style={{ background: 'linear-gradient(135deg, #30534A, #3d6b60)' }}
+                  onMouseEnter={e => (e.currentTarget.style.background = 'linear-gradient(135deg, #1e3b34, #30534A)')}
+                  onMouseLeave={e => (e.currentTarget.style.background = 'linear-gradient(135deg, #30534A, #3d6b60)')}
                 >
                   <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span>Inquire Now</span>
@@ -258,8 +293,8 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
         {/* Empty State for Upcoming */}
         {activeTab === "upcoming" && projects.upcoming.length === 0 && (
           <div className="text-center py-12 sm:py-16">
-            <div className="w-20 h-20 sm:w-24 sm:h-24 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
-              <svg className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6" style={{ backgroundColor: '#30534A15' }}>
+              <svg className="w-10 h-10 sm:w-12 sm:h-12" style={{ color: '#30534A' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>

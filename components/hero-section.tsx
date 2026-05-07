@@ -79,7 +79,7 @@ export default function HeroSection() {
       }
       .hero-swiper .swiper-pagination-bullet-active {
         opacity: 1;
-        background: #f97316;
+        background: #C9862B;
       }
     `
     document.head.appendChild(style)
@@ -147,10 +147,10 @@ export default function HeroSection() {
         {/* Main Heading */}
         <div className="space-y-4 mb-8 max-w-4xl">
           <h1
-            className={`text-2xl md:text-4xl font-bold text-orange-500 transition-all duration-700 drop-shadow-lg ${
+            className={`text-2xl md:text-4xl font-bold transition-all duration-700 drop-shadow-lg ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
-            style={{ transitionDelay: "100ms" }}
+            style={{ color: '#C9862B', transitionDelay: "100ms" }}
           >
             Build Your Dream Home With Mahalaxmi Developers In Nagpur.
           </h1>
@@ -167,7 +167,7 @@ export default function HeroSection() {
           </h1>
         </div>
 
-        <div className="py-1 px-4 md:px-6 bg-orange-500 mb-3">
+        <div className="py-1 px-4 md:px-6 mb-3" style={{ backgroundColor: '#30534A' }}>
           <h3 className="text-xs md:text-lg text-white font-light">
             NMRDA SANCTION RL RERA APPROVED PROJECTS
           </h3>
@@ -186,21 +186,27 @@ export default function HeroSection() {
         >
           <Button
             onClick={() => handleScrollToSection("contact")}
-            className="bg-orange-500 hover:bg-orange-700 text-white px-4 py-3 md:px-8 md:py-6 text-sm md:text-lg cursor-pointer"
+            className="text-white px-4 py-3 md:px-8 md:py-6 text-sm md:text-lg cursor-pointer"
+            style={{ backgroundColor: '#30534A' }}
+            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#1e3b34')}
+            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#30534A')}
           >
             Contact Us
           </Button>
           <Button
             onClick={() => handleScrollToSection("our-projects")}
-            className="bg-orange-500 hover:bg-orange-700 px-4 py-3 md:px-8 md:py-6 text-sm md:text-lg cursor-pointer"
+            className="text-white px-4 py-3 md:px-8 md:py-6 text-sm md:text-lg cursor-pointer"
+            style={{ backgroundColor: '#30534A' }}
+            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#1e3b34')}
+            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#30534A')}
           >
             Explore Projects
           </Button>
         </div>
 
-        <div className="bg-orange-500 py-3 px-6 rounded">
+        <div className="py-3 px-6 rounded" style={{ backgroundColor: '#C9862B' }}>
           <h3 className="text-white text-sm md:text-base">
-            Best For Investment @ 22 lakh only on samruddhi circle Nagpur.
+            Best For Investment @ 32 lakh only on samruddhi circle Nagpur.
           </h3>
         </div>
       </div>

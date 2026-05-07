@@ -94,16 +94,16 @@ export default function BlogSection() {
   const displayedArticles = showMore ? filteredArticles : filteredArticles.slice(0, 4)
 
   return (
-    <section id="blog" className="py-10 sm:py-14 md:py-24 px-3 sm:px-6 md:px-8 bg-gradient-to-b from-white via-orange-50/20 to-white">
+    <section id="blog" className="py-10 sm:py-14 md:py-24 px-3 sm:px-6 md:px-8 bg-gradient-to-b from-white via-[#30534A]/5 to-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 px-3 py-1.5 bg-orange-100 rounded-full">
-            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-            <span className="text-orange-700 font-bold text-xs sm:text-sm uppercase tracking-wider">Latest Updates</span>
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4 px-3 py-1.5 rounded-full" style={{ backgroundColor: '#30534A12' }}>
+            <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#30534A' }} />
+            <span className="font-bold text-xs sm:text-sm uppercase tracking-wider" style={{ color: '#30534A' }}>Latest Updates</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-2 sm:mb-4">
-            News & <span className="text-orange-600">Articles</span>
+            News & <span style={{ color: '#30534A' }}>Articles</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-600 max-w-2xl mx-auto">
             Stay updated with the latest insights and trends in real estate
@@ -121,9 +121,26 @@ export default function BlogSection() {
               }}
               className={`px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? "bg-orange-500 text-white shadow-lg scale-105"
-                  : "bg-slate-100 text-slate-700 hover:bg-orange-100 hover:text-orange-700"
+                  ? "text-white shadow-lg scale-105"
+                  : "bg-slate-100 text-slate-700"
               }`}
+              style={
+                activeCategory === category.id
+                  ? { backgroundColor: '#30534A' }
+                  : undefined
+              }
+              onMouseEnter={e => {
+                if (activeCategory !== category.id) {
+                  e.currentTarget.style.backgroundColor = '#30534A15'
+                  e.currentTarget.style.color = '#30534A'
+                }
+              }}
+              onMouseLeave={e => {
+                if (activeCategory !== category.id) {
+                  e.currentTarget.style.backgroundColor = ''
+                  e.currentTarget.style.color = ''
+                }
+              }}
             >
               {category.label}
             </button>
@@ -135,10 +152,12 @@ export default function BlogSection() {
           {displayedArticles.map((article, index) => (
             <article
               key={article.id}
-              className="bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:border-orange-500 group cursor-pointer hover:-translate-y-2"
+              className="bg-white rounded-lg sm:rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-slate-100 group cursor-pointer hover:-translate-y-2"
               style={{
                 animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
               }}
+              onMouseEnter={e => (e.currentTarget.style.borderColor = '#30534A')}
+              onMouseLeave={e => (e.currentTarget.style.borderColor = '')}
             >
               <div className="relative overflow-hidden h-36 sm:h-44 md:h-40">
                 <img
@@ -147,13 +166,13 @@ export default function BlogSection() {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute top-2 right-2 sm:top-3 sm:right-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold shadow-lg">
+                <div className="absolute top-2 right-2 sm:top-3 sm:right-3 text-white px-2 sm:px-3 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-semibold shadow-lg" style={{ background: 'linear-gradient(135deg, #30534A, #3d6b60)' }}>
                   {article.category === "investment" ? "💰" : "🏡"} {article.category}
                 </div>
               </div>
 
               <div className="p-3 sm:p-4 md:p-5">
-                <h3 className="font-semibold sm:font-bold text-slate-900 mb-1 sm:mb-2 text-xs sm:text-sm md:text-base line-clamp-2 group-hover:text-orange-600 transition-colors duration-300">
+                <h3 className="font-semibold sm:font-bold text-slate-900 mb-1 sm:mb-2 text-xs sm:text-sm md:text-base line-clamp-2 transition-colors duration-300 group-hover:text-[#30534A]">
                   {article.title}
                 </h3>
                 <p className="text-[10px] sm:text-xs md:text-sm text-slate-600 mb-2 sm:mb-4 line-clamp-2">
@@ -166,7 +185,7 @@ export default function BlogSection() {
                     </svg>
                     {article.date}
                   </span>
-                  <span className="flex items-center gap-1 text-orange-600 font-medium">
+                  <span className="flex items-center gap-1 font-medium" style={{ color: '#C9862B' }}>
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -182,7 +201,10 @@ export default function BlogSection() {
         <div className="text-center mt-8 sm:mt-12">
           <button
             onClick={() => setShowMore(!showMore)}
-            className="px-5 sm:px-8 py-2.5 sm:py-3.5 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg sm:rounded-xl font-medium sm:font-semibold hover:from-orange-600 hover:to-orange-700 hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm sm:text-base shadow-lg"
+            className="px-5 sm:px-8 py-2.5 sm:py-3.5 text-white rounded-lg sm:rounded-xl font-medium sm:font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm sm:text-base shadow-lg"
+            style={{ background: 'linear-gradient(135deg, #30534A, #3d6b60)' }}
+            onMouseEnter={e => (e.currentTarget.style.background = 'linear-gradient(135deg, #1e3b34, #30534A)')}
+            onMouseLeave={e => (e.currentTarget.style.background = 'linear-gradient(135deg, #30534A, #3d6b60)')}
           >
             {showMore ? "Show Less Articles" : "Read More Articles"}
           </button>
