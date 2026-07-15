@@ -45,7 +45,16 @@ export default function RootLayout({
           async
           strategy="afterInteractive"
         />
-
+        <noscript>
+          <a href="https://www.tracemyip.org/GDPR-compliant-website-tracking-software.htm">
+            <img
+              src="//s2.tracemyip.org/vLg/1206/4684NR-IPIB/103683/2/12/ans/"
+              alt="Freeware gdpr compatible web site visit tracking"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ border: 0 }}
+            />
+          </a>
+        </noscript>
       </head>
       <body className={`font-sans antialiased`}>
         {children}

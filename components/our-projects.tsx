@@ -87,7 +87,7 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
         id: 9,
         title: "Mahalaxmi Nagar - 52",
         image: "/M-52-10.jpg.jpeg",
-        description :"Mahalaxmi Developers launched the project Mahalaxmi Nagar 52. The layout is NIT / NMRDA sanctioned w...",
+        description :"Hudkeshwar road Outer Ring Road dhamna Before St. Paul Pharmacy College layout close Nagpur to Gondia Samruddhi mahamarg",
         location: "MOUZA - DHAMNA"
       }
     ],
