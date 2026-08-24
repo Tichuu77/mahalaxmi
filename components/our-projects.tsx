@@ -81,14 +81,14 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
         title: "Mahalaxmi Nagar - 49",
         image: "/M-49-2.jpg.jpeg",
         description : `Mahalaxmi Developers New Project Launch In Sondapar, MIHAN This Project Located are Behind NCI Hospital, CNEACR & Sondapar Backside`,
-        location: `MOUZA - SONDAPARC-CNEACR NCI HOSPITAL`
+        location: `MOUZA - SONDAPAR NEAR NCI HOSPITAL`
       },
       {
         id: 9,
         title: "Mahalaxmi Nagar - 51",
         image: "/project_M-51.png",
         description: `Premium residential layout at Sondapar, MIHAN. Located near AIIMS and NCI with direct touch to the Outer Ring Road. Approved layout with top-class amenities.`,
-        location: `MOUZA - SONDAPAR (NEAR AIIMS)`
+        location: `MOUZA - SUMTHANA NEAR D-MART`
       },
       {
         id: 10,
