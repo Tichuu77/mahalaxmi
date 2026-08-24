@@ -80,20 +80,34 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
         id: 8,
         title: "Mahalaxmi Nagar - 49",
         image: "/M-49-2.jpg.jpeg",
-        description : ``,
-        location: ``
+        description : `Mahalaxmi Developers New Project Launch In Sondapar, MIHAN This Project Located are Behind NCI Hospital, CNEACR & Sondapar Backside`,
+        location: `MOUZA - SONDAPARC-CNEACR NCI HOSPITAL`
       },
-           {
+      {
         id: 9,
+        title: "Mahalaxmi Nagar - 51",
+        image: "/project_M-51.png",
+        description: `Premium residential layout at Sondapar, MIHAN. Located near AIIMS and NCI with direct touch to the Outer Ring Road. Approved layout with top-class amenities.`,
+        location: `MOUZA - SONDAPAR (NEAR AIIMS)`
+      },
+      {
+        id: 10,
         title: "Mahalaxmi Nagar - 52",
         image: "/M-52-10.jpg.jpeg",
         description :"Hudkeshwar road Outer Ring Road dhamna Before St. Paul Pharmacy College layout close Nagpur to Gondia Samruddhi mahamarg",
         location: "MOUZA - DHAMNA"
+      },
+      {
+        id: 11,
+        title: "Mahalaxmi Nagar - 54",
+        image: "/plotDef.avif",
+        description: `Mahalaxmi Developers launched project Mahalaxmi Nagar - 54 located at Mouza Bhilgaon, Kamptee Road. NMRDA sanctioned residential layout with excellent amenities and easy bank finance options.`,
+        location: "MOUZA - BHILGAON, KAMPTEE ROAD"
       }
     ],
     completed: [
       {
-        id: 10,
+        id: 12,
         title: "Mahalaxmi Nagar - 37",
         image: "/completedProject1.webp",
         description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 37. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
@@ -101,14 +115,14 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
        
       },
       {
-        id: 11,
+        id: 13,
         title: "Mahalaxmi Nagar - 35",
         image: "/completedProject2.webp",
         description : `Mahalaxmi Developers launched the project Mahalaxmi Nagar 35. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
         location: `MOUZA - KOTEWADA`
       },
       {
-        id: 12,
+        id: 14,
         title: "Mahalaxmi Nagar - 34",
         image: "/completedProject3.webp",
          description: `Mahalaxmi Developers launched the project Mahalaxmi Nagar 34. The layout is NIT / NMRDA sanctioned with RL. Bank finance is available 75% to 80% from any nationalized bank.`,
@@ -118,18 +132,18 @@ This Project Fully NMRDA & RL Residential Plotted Project With upto 90% Bank Fin
    
     upcoming: [
       {
-        id: 13,
+        id: 15,
         title: "Mahalaxmi Nagar - 48",
         image: "/plotDef.avif",
         description : ``,
         location: ``
       },
       {
-        id: 14,
+        id: 16,
         title: "Mahalaxmi Nagar - 50",
-        image: "/plotDef.avif",
-        description : ``,
-        location: ``
+        image: "/project_M-50.webp",
+        description: `Upcoming premium project located at Mouza - Shivmadka, touching the Samruddhi Mahamarg Circle. Great location with huge appreciation potential.`,
+        location: `MOUZA - SHIVMADKA`
       },
     ]
   }
